@@ -4,6 +4,7 @@ import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,7 +15,10 @@ const Home = () => {
      <div className='homepageBackground'>
 
     <button>
+      
+        <Link to="/prepper">
         Click to Get started
+            </Link>
       </button>
 
     </div> 
