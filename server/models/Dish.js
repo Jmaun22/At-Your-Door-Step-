@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+const dishSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -20,9 +20,9 @@ const productSchema = new Schema({
     min: 0.99
   },
   ingredients: [{
-    type: Number,
-    min: 0,
-    default: 0
+    type: String,
+    required: true,
+    trim: true
   }],
   category: {
     type: Schema.Types.ObjectId,
@@ -31,6 +31,6 @@ const productSchema = new Schema({
   }
 });
 
-const Product = mongoose.model('Product', productSchema);
+const Dish = mongoose.model('Dish', dishSchema);
 
-module.exports = Product;
+module.exports = Dish;
