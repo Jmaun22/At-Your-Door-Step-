@@ -45,6 +45,8 @@ h1 {
 }
 
 h2 {
+  display: flex;
+  justify-content: center;
   font-size: 2rem;
 }
 
@@ -117,7 +119,7 @@ span[role="img"] {
 }
 
 form {
-  width: 40%;
+  width: 95%;
 }
 
 input {
@@ -136,9 +138,13 @@ input:focus {
 
 .container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 550px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 5px;
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
 .flex-row {
