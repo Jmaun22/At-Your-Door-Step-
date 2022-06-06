@@ -29,7 +29,7 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
+          path: 'orders.dishes',
           populate: 'category'
         });
 
@@ -54,12 +54,13 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      const order = new Order({ dishes: args.dishes });
       const line_items = [];
 
-      const { products } = await order.populate('products');
+      const { dishes } = await order.populate('dishes');
 
-      for (let i = 0; i < products.length; i++) {
+      //Need to look into if stripe/square is requiring the product terms or if it can be changed to dishes
+      for (let i = 0; i < dishes.length; i++) {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
@@ -96,10 +97,10 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
+    addOrder: async (parent, { dishes }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ products });
+        const order = new Order({ dishes });
 
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
@@ -115,10 +116,10 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    updateProduct: async (parent, { _id, quantity }) => {
+    updateDish: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
-      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      return await Dish.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
