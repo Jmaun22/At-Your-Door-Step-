@@ -1,70 +1,70 @@
 import React, { useEffect } from 'react';
 import ProductItem from '../ProductItem';
 import { useStoreContext } from '../../utils/GlobalState';
-import { UPDATE_PRODUCTS } from '../../utils/actions';
+import { UPDATE_DISHES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
-import { QUERY_PRODUCTS } from '../../utils/queries';
+import { QUERY_DISHES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
-function ProductList() {
+function DishList() {
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
 
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_DISHES);
 
   useEffect(() => {
     if (data) {
       dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products,
+        type: UPDATE_DISHES,
+        dishes: data.dishes,
       });
-      data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
+      data.dishes.forEach((dish) => {
+        idbPromise('dishes', 'put', dish);
       });
     } else if (!loading) {
-      idbPromise('products', 'get').then((products) => {
+      idbPromise('dishes', 'get').then((dishes) => {
         dispatch({
-          type: UPDATE_PRODUCTS,
-          products: products,
+          type: UPDATE_DISHES,
+          dishes: dishes,
         });
       });
     }
   }, [data, loading, dispatch]);
 
-  function filterProducts() {
+  function filterDishes() {
     if (!currentCategory) {
-      return state.products;
+      return state.dishes;
     }
 
-    return state.products.filter(
-      (product) => product.category._id === currentCategory
+    return state.dishes.filter(
+      (dishes) => dishes.category._id === currentCategory
     );
   }
 
   return (
     <div className="my-2">
-      <h2>Our Products:</h2>
-      {state.products.length ? (
+      <h2>Our Food:</h2>
+      {state.dishes.length ? (
         <div className="flex-row">
-          {filterProducts().map((product) => (
+          {filterDishes().map((dish) => (
             <ProductItem
-              key={product._id}
-              _id={product._id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
+              key={dish._id}
+              _id={dish._id}
+              image={dish.image}
+              name={dish.name}
+              price={dish.price}
+              quantity={dish.quantity}
             />
           ))}
         </div>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <h3>You haven't added any dishes yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
   );
 }
 
-export default ProductList;
+export default DishList;
