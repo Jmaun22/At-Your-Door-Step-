@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 
 const Home = () => {
   return (
-    <div className="container" >
+    <div className="homepage-container" >
 
      <div className='homepageBackground'>
 
