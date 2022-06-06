@@ -1,9 +1,9 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #B5CDA3;
+  --secondary: #C9E4C5;
+  --tertiary: #B5CDA3;
   --light: #fafafa;
-  --dark: #272f32;
+  --dark: #9EB23B;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -143,7 +143,7 @@ input:focus {
 
 .flex-row {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .space-between {
