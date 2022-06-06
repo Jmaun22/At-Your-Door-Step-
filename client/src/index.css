@@ -135,10 +135,15 @@ input:focus {
 }
 
 .container {
-  width: 85%;
-  max-width: 1200px;
+  /* width: 85%; */
+  /* max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
+
+  padding: 0 0rem; */
+  max-width: 1588px;
+  padding: 0 px;
+  margin: 0 px;
 }
 
 .flex-row {
