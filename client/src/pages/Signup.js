@@ -20,7 +20,6 @@ function Signup(props) {
         state: formState.state,
         city: formState.city,
         phoneNumber: formState.phoneNumber,
-        prepper: formState.prepper,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -118,16 +117,6 @@ function Signup(props) {
             name="phoneNumber"
             type="phoneNumber"
             id="phoneNumer"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="prepper">Would you like to be a prepper?</label>
-          <input
-            placeholder="Yes or No"
-            name="prepper"
-            type="prepper"
-            id="prepper"
             onChange={handleChange}
           />
         </div>
