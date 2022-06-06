@@ -16,6 +16,11 @@ function Signup(props) {
         password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        address: formState.address,
+        state: formState.state,
+        city: formState.city,
+        phoneNumber: formState.phoneNumber,
+        prepper: formState.prepper,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -73,6 +78,56 @@ function Signup(props) {
             name="password"
             type="password"
             id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="address">Address:</label>
+          <input
+            placeholder="Your address here"
+            name="address"
+            type="address"
+            id="address"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="state">State:</label>
+          <input
+            placeholder="ie FL, GA, NY"
+            name="state"
+            type="state"
+            id="state"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="city">City:</label>
+          <input
+            placeholder="Your city here"
+            name="city"
+            type="city"
+            id="city"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            placeholder="123-456-7891"
+            name="phoneNumber"
+            type="phoneNumber"
+            id="phoneNumer"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="prepper">Would you like to be a prepper?</label>
+          <input
+            placeholder="Yes or No"
+            name="prepper"
+            type="prepper"
+            id="prepper"
             onChange={handleChange}
           />
         </div>
