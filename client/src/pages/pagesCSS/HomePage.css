@@ -1,0 +1,8 @@
+.homepageBackground {
+    background-image: url(../../assets/door-food.jpg);
+    opacity: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
