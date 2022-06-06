@@ -3,25 +3,44 @@ import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
+import Button from "react-bootstrap/Button";
+
+
 
 const Home = () => {
   return (
-    <div className="homepageBackground" >
+    <div className="container" >
 
-    {/* <div className='homepageBackground'>
-    <h1> yoy</h1>
+     <div className='homepageBackground'>
 
-    </div> */}
-
-      <CategoryMenu />
-      {/* <ProductList /> */}
-
-      <button>
+    <button>
         Click to Get started
       </button>
 
+    </div> 
+
+    <div>
+
+    <h1> Lets get started</h1>
+    <Button variant="warning">Warning</Button>
+
+
+
+ 
+  
+     </div>
+
+      <CategoryMenu />
+
+        <ProductList />
+
+    
+  
+
+    
+
       <Cart />
-    </div>
+    </div> 
   );
 };
 

@@ -136,7 +136,18 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
-.container {
+.homepage-container {
+  /* width: 85%; */
+  /* max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0rem; */
+  max-width: 1588px;
+  padding: 0 px;
+  margin: 0 px;
+}
+
+.login-container {
   width: 85%;
   max-width: 550px;
   margin-left: auto;

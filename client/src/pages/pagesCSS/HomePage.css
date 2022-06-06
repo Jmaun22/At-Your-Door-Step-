@@ -5,4 +5,16 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backRoundDiv {
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
