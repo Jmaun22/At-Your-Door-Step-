@@ -25,6 +25,21 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
+  address: {
+    type: String,
+    required: true,
+  },
+  state: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
+    type: String,
+  },
   orders: [Order.schema]
 });
 

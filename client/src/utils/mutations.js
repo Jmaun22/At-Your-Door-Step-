@@ -39,7 +39,6 @@ export const ADD_USER = gql`
     $state: String!
     $city: String!
     $phoneNumber: String!
-    $prepper: String!
   ) {
     addUser(
       firstName: $firstName
@@ -50,7 +49,6 @@ export const ADD_USER = gql`
       state: $state
       city: $city
       phoneNumber: $phoneNumber
-      prepper: $prepper
     ) {
       token
       user {
