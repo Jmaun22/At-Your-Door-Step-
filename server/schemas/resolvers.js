@@ -122,17 +122,12 @@ const resolvers = {
       return await Dish.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
     addDish: async (parent, args, context) => {
-      console.log('hooked up');
-      console.log(args)
       args.ingredients = args.ingredients.split(',');
-      console.log(args.ingredients)
-      console.log(args.category)
+
       const catId = await Category.findOne({name: args.category}).exec();
-      console.log(catId)
       args.category = catId._id
-      console.log(args)
+      
       const dish = await Dish.create(args);
-      console.log(dish)
       return dish;
     },
     login: async (parent, { email, password }) => {
