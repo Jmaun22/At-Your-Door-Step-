@@ -48,6 +48,7 @@ h2 {
   display: flex;
   justify-content: center;
   font-size: 2rem;
+  color:var(--dark);
 }
 
 h3 {
@@ -77,8 +78,17 @@ a {
   font-weight: bold;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+a:active {
+  text-decoration: none;
 }
 
 header {
@@ -98,11 +108,13 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 button:hover {
   opacity: .8;
+  background-color: var(--dark);
 }
 
 button[disabled] {
@@ -132,7 +144,7 @@ input {
 }
 
 input:focus {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--tertiary);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
@@ -152,10 +164,20 @@ input:focus {
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid;
+  border: 1px solid var(--dark);
   border-radius: 1rem;
   padding: 5px;
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0.5rem rgba(150, 150, 150, 0.5);
+  background-color: var(--light);
+}
+
+.go-to-signup {
+  color:var(--primary);
+  text-decoration: none;
+}
+
+.go-to-signup:hover {
+  color: var(--dark);
 }
 
 .flex-row {
