@@ -1,5 +1,5 @@
 import React from "react";
-import ProductList from "../components/ProductList";
+import DishList from "../components/DishList";
 import CategoryMenu from "../components/CategoryMenu";
 // import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
@@ -70,7 +70,7 @@ const Prepper = () => {
 
       <CategoryMenu />
 
-        <ProductList />
+        <DishList />
 
     
   

@@ -71,8 +71,10 @@ function App() {
               element={<Prepper />}
 
               />
-              {/* <Route 
-                path="/products/:id" 
+
+              <Route 
+                path="/dishes/:id" 
+
                 element={<Detail />} 
               /> */}
               <Route 
