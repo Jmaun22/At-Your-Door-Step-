@@ -8,7 +8,7 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    dishes: async (parent, { category, name }) => {
+    dishes: async (parent, { category, name, prepper }) => {
       const params = {};
 
       if (category) {
@@ -21,7 +21,21 @@ const resolvers = {
         };
       }
 
-      return await Dish.find(params).populate('category');
+      if (prepper) {
+        params.prepper = prepper;
+      }
+
+      return await Dish.find(params).populate('category').populate('prepper');
+    },
+    myDishes: async (parent, { prepper }, context) => {
+      const params = {};
+      if(prepper) {
+        params.prepper = prepper
+      } else {
+        params.prepper = context.user._id
+      }
+
+      return await Dish.find(params).populate('category').populate('prepper');
     },
     dish: async (parent, { _id }) => {
       return await Dish.findById(_id).populate('category');

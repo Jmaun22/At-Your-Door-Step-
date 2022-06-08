@@ -15,6 +15,9 @@ import { InputGroup, FormControl, Dropdown, DropdownButton} from "react-bootstra
 import { useMutation } from "@apollo/client";
 import { ADD_DISH } from "../utils/mutations";
 
+import PrepperDishes from "../components/PrepperDishes";
+
+
 
 
 const Home = () => {
@@ -184,15 +187,12 @@ const Home = () => {
   
      </div>
 
+     <h1>Your prepper dishes</h1>
+     <PrepperDishes />
+      <DishList />
 
-      <CategoryMenu />
 
-        <DishList />
-
-    
-  
-
-    
+     <div>
 
       <Cart />
     </div> 
