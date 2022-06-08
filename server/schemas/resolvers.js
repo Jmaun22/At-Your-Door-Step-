@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Dish, Category, Order, } = require('../models');
+const { User, Dish, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -21,10 +21,10 @@ const resolvers = {
         };
       }
 
-      return await Dish.find(params).populate('category').populate('prepper');
+      return await Dish.find(params).populate('category');
     },
     dish: async (parent, { _id }) => {
-      return await Dish.findById(_id).populate('category').populate('prepper');
+      return await Dish.findById(_id).populate('category');
     },
     user: async (parent, args, context) => {
       if (context.user) {
@@ -45,7 +45,7 @@ const resolvers = {
         const user = await User.findById(context.user._id).populate({
           path: 'orders.dishes',
           populate: 'category'
-        })
+        });
 
         return user.orders.id(_id);
       }

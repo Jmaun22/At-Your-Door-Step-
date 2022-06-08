@@ -1,9 +1,9 @@
 import React from "react";
 import DishList from "../components/DishList";
 import CategoryMenu from "../components/CategoryMenu";
-// import Cart from "../components/Cart";
+import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
-
+import Button from "react-bootstrap/Button";
 import Carousel from 'react-bootstrap/Carousel'
 import '../pages/pagesCSS/PrepperPage.css';
 
@@ -61,6 +61,7 @@ const Prepper = () => {
 
     <h1> Lets get started</h1>
 
+    <Button variant="warning">Warning</Button>
 
 
 
@@ -77,7 +78,7 @@ const Prepper = () => {
 
     
 
-      {/* <Cart /> */}
+      <Cart />
     </div> 
   );
 };
