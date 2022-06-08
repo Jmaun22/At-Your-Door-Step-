@@ -58,7 +58,7 @@ const typeDefs = gql`
     addUser(firstName: String!, lastName: String!, email: String!, password: String!, address: String!, state: String!, city: String!, phoneNumber: String): Auth
     addOrder(dishes: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String, address: String, state: String, city: String, phoneNumber: String): User
-    updateDish(_id: ID!, quantity: Int!): Dish
+    updateDish(_id: ID!): Dish
     login(email: String!, password: String!): Auth
   }
 `;
