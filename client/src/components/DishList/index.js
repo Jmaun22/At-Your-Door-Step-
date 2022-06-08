@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ProductItem from '../ProductItem';
+import DishItem from '../DishItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_DISHES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -49,7 +49,7 @@ function DishList() {
       {state.dishes.length ? (
         <div className="flex-row">
           {filterDishes().map((dish) => (
-            <ProductItem
+            <DishItem
               key={dish._id}
               _id={dish._id}
               image={dish.image}

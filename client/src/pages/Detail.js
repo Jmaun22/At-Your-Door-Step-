@@ -1,117 +1,117 @@
-// import React, { useEffect, useState } from 'react';
-// import { Link, useParams } from 'react-router-dom';
-// import { useQuery } from '@apollo/client';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
 
-// import Cart from '../components/Cart';
-// import { useStoreContext } from '../utils/GlobalState';
-// import {
-//   REMOVE_FROM_CART,
-//   UPDATE_CART_QUANTITY,
-//   ADD_TO_CART,
-//   UPDATE_PRODUCTS,
-// } from '../utils/actions';
-// import { QUERY_PRODUCTS } from '../utils/queries';
-// import { idbPromise } from '../utils/helpers';
-// import spinner from '../assets/spinner.gif';
+import Cart from '../components/Cart';
+import { useStoreContext } from '../utils/GlobalState';
+import {
+  REMOVE_FROM_CART,
+  UPDATE_CART_QUANTITY,
+  ADD_TO_CART,
+  UPDATE_DISHES,
+} from '../utils/actions';
+import { QUERY_DISHES } from '../utils/queries';
+import { idbPromise } from '../utils/helpers';
+import spinner from '../assets/spinner.gif';
 
-// function Detail() {
-//   const [state, dispatch] = useStoreContext();
-//   const { id } = useParams();
+function Detail() {
+  const [state, dispatch] = useStoreContext();
+  const { id } = useParams();
 
-//   const [currentProduct, setCurrentProduct] = useState({});
+  const [currentDish, setCurrentDish] = useState({});
 
-//   const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_DISHES);
 
-//   const { products, cart } = state;
+  const { dishes, cart } = state;
 
-//   useEffect(() => {
-//     // already in global store
-//     if (products.length) {
-//       setCurrentProduct(products.find((product) => product._id === id));
-//     }
-//     // retrieved from server
-//     else if (data) {
-//       dispatch({
-//         type: UPDATE_PRODUCTS,
-//         products: data.products,
-//       });
+  useEffect(() => {
+    // already in global store
+    if (dishes.length) {
+      setCurrentDish(dishes.find((dish) => dish._id === id));
+    }
+    // retrieved from server
+    else if (data) {
+      dispatch({
+        type: UPDATE_DISHES,
+        dishes: data.dishes,
+      });
 
-//       data.products.forEach((product) => {
-//         idbPromise('products', 'put', product);
-//       });
-//     }
-//     // get cache from idb
-//     else if (!loading) {
-//       idbPromise('products', 'get').then((indexedProducts) => {
-//         dispatch({
-//           type: UPDATE_PRODUCTS,
-//           products: indexedProducts,
-//         });
-//       });
-//     }
-//   }, [products, data, loading, dispatch, id]);
+      data.dishes.forEach((dish) => {
+        idbPromise('dishes', 'put', dish);
+      });
+    }
+    // get cache from idb
+    else if (!loading) {
+      idbPromise('dishes', 'get').then((indexedDishes) => {
+        dispatch({
+          type: UPDATE_DISHES,
+          dishes: indexedDishes,
+        });
+      });
+    }
+  }, [dishes, data, loading, dispatch, id]);
 
-//   const addToCart = () => {
-//     const itemInCart = cart.find((cartItem) => cartItem._id === id);
-//     if (itemInCart) {
-//       dispatch({
-//         type: UPDATE_CART_QUANTITY,
-//         _id: id,
-//         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
-//       });
-//       idbPromise('cart', 'put', {
-//         ...itemInCart,
-//         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
-//       });
-//     } else {
-//       dispatch({
-//         type: ADD_TO_CART,
-//         product: { ...currentProduct, purchaseQuantity: 1 },
-//       });
-//       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
-//     }
-//   };
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    if (!itemInCart) {
+      dispatch({
+        type: ADD_TO_CART,
+        dish: { ...currentDish, purchaseQuantity: 1 },
+      });
+      idbPromise('cart', 'put', { ...currentDish, purchaseQuantity: 1 });
+    } else {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+    }
+  };
 
-//   const removeFromCart = () => {
-//     dispatch({
-//       type: REMOVE_FROM_CART,
-//       _id: currentProduct._id,
-//     });
+  const removeFromCart = () => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: currentDish._id,
+    });
 
-//     idbPromise('cart', 'delete', { ...currentProduct });
-//   };
+    idbPromise('cart', 'delete', { ...currentDish });
+  };
 
-//   return (
-//     <>
-//       {currentProduct && cart ? (
-//         <div className="container my-1">
-//           <Link to="/">← Back to Products</Link>
+  return (
+    <>
+      {currentDish && cart ? (
+        <div className="container my-1">
+          <Link to="/">← Back to Dishes</Link>
 
-//           <h2>{currentProduct.name}</h2>
+          <h2>{currentDish.name}</h2>
 
-//           <p>{currentProduct.description}</p>
+          <p>{currentDish.description}</p>
 
-//           <p>
-//             <strong>Price:</strong>${currentProduct.price}{' '}
-//             <button onClick={addToCart}>Add to Cart</button>
-//             <button
-//               disabled={!cart.find((p) => p._id === currentProduct._id)}
-//               onClick={removeFromCart}
-//             >
-//               Remove from Cart
-//             </button>
-//           </p>
+          <p>
+            <strong>Price:</strong>${currentDish.price}{' '}
+            <button onClick={addToCart}>Add to Cart</button>
+            <button
+              disabled={!cart.find((p) => p._id === currentDish._id)}
+              onClick={removeFromCart}
+            >
+              Remove from Cart
+            </button>
+          </p>
 
-//           <img
-//             src={`/images/${currentProduct.image}`}
-//             alt={currentProduct.name}
-//           />
-//         </div>
-//       ) : null}
-//       {loading ? <img src={spinner} alt="loading" /> : null}
-//       <Cart />
-//     </>
-//   );
-// }
+          <img
+            src={`/images/${currentDish.image}`}
+            alt={currentDish.name}
+          />
+        </div>
+      ) : null}
+      {loading ? <img src={spinner} alt="loading" /> : null}
+      <Cart />
+    </>
+  );
+}
 
-// export default Detail;
+export default Detail;
