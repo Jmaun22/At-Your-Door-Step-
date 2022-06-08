@@ -72,7 +72,7 @@ function App() {
 
               />
               <Route 
-                path="/products/:id" 
+                path="/dishes/:id" 
                 element={<Detail />} 
               />
               <Route 

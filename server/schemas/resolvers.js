@@ -59,17 +59,16 @@ const resolvers = {
 
       const { dishes } = await order.populate('dishes');
 
-      //Need to look into if stripe/square is requiring the product terms or if it can be changed to dishes
       for (let i = 0; i < dishes.length; i++) {
-        const product = await stripe.products.create({
-          name: products[i].name,
-          description: products[i].description,
-          images: [`${url}/images/${products[i].image}`]
+        const dish = await stripe.dishes.create({
+          name: dishes[i].name,
+          description: dishes[i].description,
+          images: [`${url}/images/${dishes[i].image}`]
         });
 
         const price = await stripe.prices.create({
-          product: product.id,
-          unit_amount: products[i].price * 100,
+          dish: dish.id,
+          unit_amount: dishes[i].price * 100,
           currency: 'usd',
         });
 
@@ -116,10 +115,8 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    updateDish: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
-
-      return await Dish.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    updateDish: async (parent, { _id}) => {
+      return await Dish.findById(_id);
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
