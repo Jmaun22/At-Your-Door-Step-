@@ -48,7 +48,7 @@ const Cart = () => {
 
   function submitCheckout() {
     const dishIds = [];
-
+    console.log(state.cart);
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         dishIds.push(item._id);

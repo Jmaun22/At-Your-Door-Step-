@@ -56,27 +56,30 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ dishes: args.dishes });
       const line_items = [];
-
+      
       const { dishes } = await order.populate('dishes');
+      console.log( dishes );
 
       for (let i = 0; i < dishes.length; i++) {
-        const dish = await stripe.dishes.create({
+        const dish = await stripe.products.create({
           name: dishes[i].name,
           description: dishes[i].description,
           images: [`${url}/images/${dishes[i].image}`]
         });
 
         const price = await stripe.prices.create({
-          dish: dish.id,
+          product: dish.id,
           unit_amount: dishes[i].price * 100,
           currency: 'usd',
         });
+        console.log(price);
 
-        line_items.push({
+        try { line_items.push({
           price: price.id,
           quantity: 1
-        });
-      }
+        })} catch (e){ console.log(e) };
+        };
+        console.log(dishes)
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
