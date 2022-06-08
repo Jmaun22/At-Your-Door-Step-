@@ -74,29 +74,3 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
-export const QUERY_PREP_DISHES = gql`
-  {
-    user {
-      firstName
-      lastName
-      email
-      password
-      address
-      state
-      city
-      phoneNumber
-      prepper {
-        _id
-        dishes {
-          _id
-          name
-          description
-          image
-          price
-          ingredients
-        }
-      }
-    }
-  }
-`;

@@ -14,7 +14,6 @@ const typeDefs = gql`
     price: Float
     ingredients: [String]
     category: Category
-    prepper: User
   }
 
   type Order {
