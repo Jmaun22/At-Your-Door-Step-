@@ -28,6 +28,10 @@ const dishSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
+  },
+  prepper: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
 });
 
