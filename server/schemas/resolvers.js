@@ -56,28 +56,30 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ dishes: args.dishes });
       const line_items = [];
-
+      
       const { dishes } = await order.populate('dishes');
+      console.log( dishes );
 
-      //Need to look into if stripe/square is requiring the product terms or if it can be changed to dishes
       for (let i = 0; i < dishes.length; i++) {
-        const product = await stripe.products.create({
-          name: products[i].name,
-          description: products[i].description,
-          images: [`${url}/images/${products[i].image}`]
+        const dish = await stripe.products.create({
+          name: dishes[i].name,
+          description: dishes[i].description,
+          images: [`${url}/images/${dishes[i].image}`]
         });
 
         const price = await stripe.prices.create({
-          product: product.id,
-          unit_amount: products[i].price * 100,
+          product: dish.id,
+          unit_amount: dishes[i].price * 100,
           currency: 'usd',
         });
+        console.log(price);
 
-        line_items.push({
+        try { line_items.push({
           price: price.id,
           quantity: 1
-        });
-      }
+        })} catch (e){ console.log(e) };
+        };
+        console.log(dishes)
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
@@ -116,10 +118,8 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    updateDish: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
-
-      return await Dish.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    updateDish: async (parent, { _id}) => {
+      return await Dish.findById(_id);
     },
     addDish: async (parent, args, context) => {
       args.ingredients = args.ingredients.split(',');

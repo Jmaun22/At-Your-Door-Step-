@@ -48,7 +48,7 @@ const Cart = () => {
 
   function submitCheckout() {
     const dishIds = [];
-
+    console.log(state.cart);
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         dishIds.push(item._id);
@@ -97,7 +97,7 @@ const Cart = () => {
           <span role="img" aria-label="shocked">
             😱
           </span>
-          You haven't added anything to your cart yet!
+          Shopping cart empty
         </h3>
       )}
     </div>

@@ -1,6 +1,9 @@
 import React from "react";
-// import ProductList from "../components/ProductList";
-// import CategoryMenu from "../components/CategoryMenu";
+
+import DishList from "../components/DishList";
+import CategoryMenu from "../components/CategoryMenu";
+
+
 import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
 import Button from "react-bootstrap/Button";
@@ -181,7 +184,10 @@ const Home = () => {
   
      </div>
 
-    
+
+      <CategoryMenu />
+
+        <DishList />
 
     
   
