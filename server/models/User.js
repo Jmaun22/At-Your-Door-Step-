@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Order = require('./Order');
-const Dish = require('./Dish');
 
 const userSchema = new Schema({
   firstName: {
@@ -38,13 +37,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-
   phoneNumber: {
     type: String,
   },
-
-  orders: [Order.schema],
-
+  orders: [Order.schema]
 });
 
 // set up pre-save middleware to create password

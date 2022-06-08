@@ -1,6 +1,9 @@
 import React from "react";
-import ProductList from "../components/ProductList";
-// import CategoryMenu from "../components/CategoryMenu";
+
+import DishList from "../components/DishList";
+import CategoryMenu from "../components/CategoryMenu";
+
+
 import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
 import Button from "react-bootstrap/Button";
@@ -11,7 +14,9 @@ import { useState } from "react";
 import { InputGroup, FormControl, Dropdown, DropdownButton} from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { ADD_DISH } from "../utils/mutations";
+
 import PrepperDishes from "../components/PrepperDishes";
+
 
 
 
@@ -184,19 +189,10 @@ const Home = () => {
 
      <h1>Your prepper dishes</h1>
      <PrepperDishes />
-      <ProductList />
+      <DishList />
 
 
      <div>
-
-     </div>
-
-    
-
-    
-  
-
-    
 
       <Cart />
     </div> 
