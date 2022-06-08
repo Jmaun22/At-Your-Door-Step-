@@ -1,8 +1,24 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_DISHES = gql`
-  query getDishes($category: ID) {
-    dishes(category: $category) {
+  query getDishes($category: ID, $prepper: ID) {
+    dishes(category: $category, prepper: $prepper) {
+      _id
+      name
+      description
+      image
+      price
+      ingredients
+      category {
+        _id
+      }
+    }
+  }
+`;
+
+export const QUERY_MY_DISHES = gql`
+  query getMyDishes($prepper: ID) {
+    myDishes(prepper: $prepper) {
       _id
       name
       description

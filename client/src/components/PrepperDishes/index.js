@@ -1,54 +1,53 @@
 import React, { useEffect } from 'react';
 import ProductItem from '../ProductItem';
-import { useStoreContext } from '../../utils/GlobalState';
+import { useMyDishesContext } from '../../utils/GlobalState';
 import { UPDATE_DISHES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
-import { QUERY_DISHES } from '../../utils/queries';
+import { QUERY_MY_DISHES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 function DishListPrepper() {
-  const [state, dispatch] = useStoreContext();
+  const { loading, data } = useQuery(QUERY_MY_DISHES);
+  console.log(data)
+  const userData = data?.myDishes || {};
+  console.log(userData)
 
-  const { currentCategory } = state;
+  // const [deleteBook] = useMutation(REMOVE_BOOK);
 
-  const { loading, data } = useQuery(QUERY_DISHES);
+  // // create function that accepts the book's mongo _id value as param and deletes the book from the database
+  // const handleDeleteBook = async (bookId) => {
+  //   const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-  useEffect(() => {
-    if (data) {
-      dispatch({
-        type: UPDATE_DISHES,
-        dishes: data.dishes,
-      });
-      data.dishes.forEach((dish) => {
-        idbPromise('dishes', 'put', dish);
-      });
-    } else if (!loading) {
-      idbPromise('dishes', 'get').then((dishes) => {
-        dispatch({
-          type: UPDATE_DISHES,
-          dishes: dishes,
-        });
-      });
-    }
-  }, [data, loading, dispatch]);
+  //   if (!token) {
+  //     return false;
+  //   }
 
-  function filterDishes() {
-    if (!currentCategory) {
-      return state.dishes;
-    }
+  //   try {
+  //     console.log(bookId)
+  //     const { data } = await deleteBook({
+  //       variables: { bookId },
+  //     });
 
-    return state.dishes.filter(
-      (dishes) => dishes.category._id === currentCategory
-    );
+  //     // upon success, remove book's id from localStorage
+  //     removeBookId(bookId);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+
+  // if data isn't here yet, say so
+  if (loading) {
+    return <h2>LOADING...</h2>;
   }
 
   return (
     <div className="my-2">
       <h2>Our Food:</h2>
-      {state.dishes.length ? (
+      {userData.length ? (
         <div className="flex-row">
-          {filterDishes().map((dish) => (
+    
+          {userData.map((dish) => (
             <ProductItem
               key={dish._id}
               _id={dish._id}
@@ -65,7 +64,7 @@ function DishListPrepper() {
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
-  );
-}
+  )
+};
 
 export default DishListPrepper;

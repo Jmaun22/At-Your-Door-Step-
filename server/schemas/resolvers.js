@@ -8,7 +8,7 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    dishes: async (parent, { category, name }) => {
+    dishes: async (parent, { category, name, prepper }) => {
       const params = {};
 
       if (category) {
@@ -19,6 +19,20 @@ const resolvers = {
         params.name = {
           $regex: name
         };
+      }
+
+      if (prepper) {
+        params.prepper = prepper;
+      }
+
+      return await Dish.find(params).populate('category').populate('prepper');
+    },
+    myDishes: async (parent, { prepper }, context) => {
+      const params = {};
+      if(prepper) {
+        params.prepper = prepper
+      } else {
+        params.prepper = context.user._id
       }
 
       return await Dish.find(params).populate('category').populate('prepper');
