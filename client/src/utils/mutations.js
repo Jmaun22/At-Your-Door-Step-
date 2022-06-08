@@ -11,6 +11,19 @@ export const LOGIN = gql`
   }
 `;
 
+export const ADD_DISH = gql`
+  mutation addDish($name: String!, $description: String, $image: String, $price: Int!, $category: String!, $ingredients: String!) {
+    addDish(name: $name, description: $description, image: $image, price: $price, category: $category, ingredients: $ingredients) {
+      _id
+      name
+      description
+      price
+      category
+      image
+   }
+  }
+`;
+
 export const ADD_ORDER = gql`
   mutation addOrder($dishes: [ID]!) {
     addOrder(dishes: $dishes) {

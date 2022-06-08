@@ -9,13 +9,49 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { InputGroup, FormControl, Dropdown, DropdownButton} from "react-bootstrap";
+import { useMutation } from "@apollo/client";
+import { ADD_DISH } from "../utils/mutations";
+
+
 
 const Home = () => {
+
+
+  const [formState, setFormState] = useState({ name: '', description: '', image: '',price: '', category: '', ingredients: ''});
+  const [addDish, { error }] = useMutation(ADD_DISH);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+   alert(`sumbitted ${formState.name}`);
+   console.log('working')
+   console.log(formState)
+    try {
+      const mutationResponse = await addDish({
+        variables: { ...formState },
+      });
+      console.log(mutationResponse);
+  
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  
+ 
+
 
 
   return (
@@ -47,12 +83,12 @@ const Home = () => {
         </Modal.Header>
         <Modal.Body>
         
-        <Form>
+        <Form onSubmit={handleFormSubmit}>
   <Form.Group className="mb-3" controlId="formBasicEmail">
  {/* dish name */}
   <InputGroup className="mb-3">
-    <InputGroup.Text id="basic-addon1">🍲</InputGroup.Text>
-    <FormControl
+    <InputGroup.Text id="basic-addon1"  >🍲</InputGroup.Text>
+    <FormControl name="name"  onChange={handleChange}
       placeholder="Dish Name"
       aria-label="Username"
       aria-describedby="basic-addon1"
@@ -64,8 +100,8 @@ const Home = () => {
    
 
   <InputGroup className="mb-3">
-    <InputGroup.Text id="basic-addon1">📝</InputGroup.Text>
-    <FormControl
+    <InputGroup.Text id="basic-addon1" >📝</InputGroup.Text>
+    <FormControl name="description" onChange={handleChange}
       placeholder="Dish Description"
       aria-label="Username"
       aria-describedby="basic-addon1"
@@ -74,24 +110,25 @@ const Home = () => {
 {/* image */}
 <div className="m-3">
       <label className="mx-3">🖼️ Choose image: </label>
-      <input className="d-none" type="file" />
+      <input className="d-none" type="file" name="image" onChange={handleChange}/>
       <button className="btn btn-outline-primary">Upload food pic</button>
     </div>
 {/* price */}
 <InputGroup className="mb-3">
-    <InputGroup.Text>💰$</InputGroup.Text>
-    <FormControl aria-label="Amount (to the nearest dollar)" />
-    <InputGroup.Text>.00</InputGroup.Text>
+    <InputGroup.Text >💰$</InputGroup.Text>
+
+    <InputGroup.Text >.00</InputGroup.Text>
+    <FormControl aria-label="Amount (to the nearest dollar)" name='price'  onChange={handleChange}/>
   </InputGroup>
   {/* ingredients */}
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Control type="password" placeholder="🧂Ingredients" />
+    <Form.Control type="" name='ingredients' placeholder="🧂Ingredients" onChange={handleChange} />
   </Form.Group>
 
 
 {/* category */}
 <InputGroup className="mb-3">
-    <DropdownButton
+    <DropdownButton  
       variant="outline-secondary"
       title="🥘Dish Category"
       id="input-group-dropdown-1"
@@ -105,7 +142,7 @@ const Home = () => {
       <Dropdown.Item href="#">Beverages</Dropdown.Item>
       <Dropdown.Item href="#">Baked Goods</Dropdown.Item>
     </DropdownButton>
-    <FormControl aria-label="Text input with dropdown button" />
+    <FormControl aria-label="Text input with dropdown button" name='category' onChange={handleChange}/>
   </InputGroup>
 
 
@@ -119,7 +156,7 @@ const Home = () => {
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
-  <Button variant="primary" type="submit">
+  <Button variant="primary" type="submit" onClick={handleFormSubmit}>
     Submit
   </Button>
 </Form>
