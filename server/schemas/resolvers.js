@@ -121,6 +121,15 @@ const resolvers = {
     updateDish: async (parent, { _id}) => {
       return await Dish.findById(_id);
     },
+    addDish: async (parent, args, context) => {
+      args.ingredients = args.ingredients.split(',');
+
+      const catId = await Category.findOne({name: args.category}).exec();
+      args.category = catId._id
+      
+      const dish = await Dish.create(args);
+      return dish;
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
