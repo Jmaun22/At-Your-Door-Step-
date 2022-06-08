@@ -47,6 +47,7 @@ const typeDefs = gql`
   type Query {
     categories: [Category]
     dishes(category: ID, name: String): [Dish]
+    categorydishes (name: String!): [Dish]
     dish(_id: ID!): Dish
     user: User
     order(_id: ID!): Order

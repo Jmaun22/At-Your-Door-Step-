@@ -23,6 +23,10 @@ const resolvers = {
 
       return await Dish.find(params).populate('category');
     },
+    categorydishes: async (parent, args) => {
+      const dishes = await Dish.find().populate('category')
+      return dishes.filter(dish => dish.category.name == args.name)
+    },.
     dish: async (parent, { _id }) => {
       return await Dish.findById(_id).populate('category');
     },

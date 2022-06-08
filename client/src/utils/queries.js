@@ -16,6 +16,19 @@ export const QUERY_DISHES = gql`
   }
 `;
 
+export const QUERY_CATEGORY_DISHES = gql`
+  query getCategoryDishes($categoryname: name) {
+    categorydishes(name: $categoryname) {
+      _id
+      name
+      description
+      image
+      price
+      ingredients
+    }
+  }
+`;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($dishes: [ID]!) {
     checkout(dishes: $dishes) {
