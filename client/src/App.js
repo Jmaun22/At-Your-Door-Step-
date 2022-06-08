@@ -76,7 +76,7 @@ function App() {
                 path="/dishes/:id" 
 
                 element={<Detail />} 
-              /> */}
+              /> 
               <Route 
                 path="*" 
                 element={<NoMatch />} 
