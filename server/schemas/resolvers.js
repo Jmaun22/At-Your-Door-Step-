@@ -72,14 +72,14 @@ const resolvers = {
           unit_amount: dishes[i].price * 100,
           currency: 'usd',
         });
-        console.log(price);
+        
 
         try { line_items.push({
           price: price.id,
           quantity: 1
         })} catch (e){ console.log(e) };
         };
-        console.log(dishes)
+        
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
