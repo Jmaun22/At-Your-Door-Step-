@@ -36,12 +36,14 @@ const Home = () => {
       console.log(formState.price)
       console.log(formState.category)
       console.log(formState.ingredients)
+      console.log(formState.description)
       const { mutationResponse } = await addDish({
         variables: {
           name: formState.name,
           ingredients: formState.ingredients,
           price: formState.price,
-          category: formState.category
+          category: formState.category,
+          description: formState.description
         },
       });
       console.log(mutationResponse);
