@@ -144,6 +144,9 @@ const resolvers = {
       const dish = await Dish.create(args);
       return dish;
     },
+    removeDish: async (parent, args) => {
+      return args
+    }
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
