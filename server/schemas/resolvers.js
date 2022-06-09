@@ -145,11 +145,11 @@ const resolvers = {
       return dish;
     },
     removeDish: async (parent, args) => {
-      if (args) {
+      if (context.user) {
         console.log(args)
-        // const deleteDish = await User.findOneAndDelete({_id})
+        const deleteDish = await Dish.findOneAndDelete({_id: args._id})
 
-        // return updatedUser;
+        return deleteDish;
       }
 
       throw new AuthenticationError("Please log in!");
