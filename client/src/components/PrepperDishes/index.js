@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import DishItem from '../DishItem';
 import { useMyDishesContext } from '../../utils/GlobalState';
 import { UPDATE_DISHES } from '../../utils/actions';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_MY_DISHES } from '../../utils/queries';
-import { REMOVE_DISH } from '../../utils/queries';
+import { REMOVE_DISH } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
