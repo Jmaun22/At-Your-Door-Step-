@@ -144,6 +144,12 @@ const resolvers = {
       const dish = await Dish.create(args);
       return dish;
     },
+    removeDish: async (parent, args) => {
+        console.log(args)
+        const deleteDish = await Dish.findOneAndDelete({_id: args._id})
+
+        return deleteDish;
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

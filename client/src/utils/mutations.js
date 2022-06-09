@@ -24,6 +24,15 @@ export const ADD_DISH = gql`
   }
 `;
 
+export const REMOVE_DISH = gql`
+  mutation removeDish($dishID: String!) {
+    removeDish( _id: $dishID) {
+      _id
+      name
+   }
+  }
+`;
+
 export const ADD_ORDER = gql`
   mutation addOrder($dishes: [ID]!) {
     addOrder(dishes: $dishes) {
