@@ -5,11 +5,11 @@ import Cart from "../components/Cart";
 import '../pages/pagesCSS/HomePage.css';
 import Button from "react-bootstrap/Button";
 import Carousel from 'react-bootstrap/Carousel'
-import '../pages/pagesCSS/PrepperPage.css';
+import '../pages/pagesCSS/CustomerPage.css';
 
 
 
-const Prepper = () => {
+const Customer = () => {
   return (
     <div className="homepage-container" >
 
@@ -57,21 +57,20 @@ const Prepper = () => {
 
 
 
-    <div>
-
-    <h1> Lets get started</h1>
-
-    <Button variant="warning">Warning</Button>
+    <div className="customer-bottom">
 
 
 
- 
+    <h1>Add a dish to your Cart 🛒</h1>
+
   
-     </div>
+  
 
       <CategoryMenu />
 
         <DishList />
+
+        </div>
 
     
   
@@ -79,8 +78,9 @@ const Prepper = () => {
     
 
       <Cart />
+
     </div> 
   );
 };
 
-export default Prepper;
+export default Customer;

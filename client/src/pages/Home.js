@@ -68,7 +68,7 @@ const Home = () => {
     <button>
       
         <Link to="/prepper" className="prepperbtn">
-        Click to Get started
+        Click here to see your dishes
             </Link>
       </button>
 
