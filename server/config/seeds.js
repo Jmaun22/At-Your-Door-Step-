@@ -175,132 +175,132 @@ db.once('open', async () => {
       ingredients: ['lasagna noodles', 'olive oil', 'ground beef', 'onion', 'garlic', 'tomato sauce', 'tomato paste', 'parsley', 'ricotta cheese', 'mozzarella cheese', 'parmesan cheese'],
       category: categories[3]._id,
     },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[3]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[3]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
+    {
+      name: 'Fettuccine Alfredo',
+      description:
+        'Fettuccine alfredo is a classic Italian pasta dish that is rich, creamy, and delicious. Tender fettuccine noodles are tossed in a homemade alfredo sauce made creamy with heavy cream, butter, and Parmesan cheese, and seasoned with garlic, salt, and pepper. When you’re craving comfort food, nothing is better than creamy pasta, and when you really need some comfort, you want it asap.',
+      image: 'fettucine-alfredo.jpg',
+      price: 13.99,
+      ingredients: ['fettuccine noodles', 'salt', 'butter', 'garlic', 'heavy cream', 'Parmesan cheese', 'ground black pepper'],
+      category: categories[3]._id,
+    },
+    {
+      name: 'Homemade Calzones',
+      description:
+        'Homemade calzones are delicious little pizza pockets that are filled with cheese and toppings and baked until golden. They are an Italian favourite that are quick and easy to make at home. Plus, they reheat very well and are great for meal prep.',
+      image: 'calzone.jpg',
+      price: 12.99,
+      ingredients: ['pizza dough', 'pizza sauce', 'pepperoni', 'mushrooms', 'green peppers', 'mozzarella cheese', 'ricotta', 'egg'],
+      category: categories[3]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[6]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[6]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[6]._id,
+    },
+    {
+      name: 'Tales at Bedtime',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+      image: 'bedtime-book.jpg',
+      price: 9.99,
+      ingredients: ['wood', 'sugar', 'salt'],
+      category: categories[6]._id,
+    },
   ]);
 
   console.log('Dish seeded');
