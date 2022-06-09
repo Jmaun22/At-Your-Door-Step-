@@ -5,23 +5,24 @@ db.once('open', async () => {
 
   await User.deleteMany();
 
-  await User.create({
+  await User.insertMany({
     firstName: 'Pamela',
     lastName: 'Washington',
     email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        dishes: [dishes[0]._id, dishes[0]._id, dishes[1]._id]
-      }
-    ]
-  });
-
-  await User.create({
+    password: 'password1',
+    address: '123 Fake St',
+    state: 'FL',
+    city: 'Orlando',
+    phoneNumber: '3216540987',
+  },{
     firstName: 'Elijah',
     lastName: 'Holt',
     email: 'eholt@testmail.com',
-    password: 'password12345'
+    password: 'password2',
+    address: '555 Nowhere Rd',
+    state: 'GA',
+    city: 'Savanah',
+    phoneNumber: '5557775555',
   });
 
   console.log('users seeded');
@@ -33,7 +34,7 @@ db.once('open', async () => {
     { name: 'Mexican' },
     { name: 'Chinese' },
     { name: 'Italian' },
-    { name: 'Desserts' },
+    { name: 'American' },
     { name: 'Beverages' },
     { name: 'Baked Goods' },
 
