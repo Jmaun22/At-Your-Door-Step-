@@ -1,5 +1,6 @@
 const db = require('./connection');
 const { User, Dish, Category } = require('../models');
+const { Types } = require('mongoose');
 
 db.once('open', async () => {
 
@@ -29,6 +30,7 @@ db.once('open', async () => {
 
   await Category.deleteMany();
 
+
   const categories = await Category.insertMany([
     { name: 'Vegetarian' },
     { name: 'Mexican' },
@@ -46,81 +48,259 @@ db.once('open', async () => {
 
   const dishes = await Dish.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Vegetarian Burrito Bowl with Avocado Crema',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
-      price: 2.99,
-      ingredients: ['flour', 'sugar', 'butter', 'salt'],
-      category: categories[4]._id,
+        'A healthy burrito bowl so delicious you will mever miss the meat',
+      image: 'vegetarian-bowl.jpg',
+      price: 11.99,
+      ingredients: ['1 head of cauliflower', '1 green pepper', '1 red bell pepper', '1/2 onion', ' 1/3 cup olive oil', '2 tbsp lime juice', '1/4 cup taco seasoning', '1 can black beans', '1/2 cup salsa', '2 cups romaine lettuce', '4 cups cilantro-lime rice' ],
+      category: categories[0]._id,
     },
     {
-      name: 'Canned Coffee',
+      name: 'Sesame Garlic Ramen Noodles',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      price: 1.99,
-      ingredients: ['coffee', 'sugar', 'salt'],
-      category: categories[5]._id,
-    },
-    {
-      name: 'Fajitas',
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'fajita.jpg',
-      price: 7.99,
-      ingredients: ['tortilla', 'beef', 'onion', 'bell pepper', 'salt', 'pepper'],
-      category: categories[1]._id,
-      
-    },
-    {
-      name: 'Spaghetti',
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'spaghetti.jpg',
-      price: 3.99,
-      ingredients: ['pasta', 'sugar', 'salt'],
-      category: categories[1]._id,
-     
-    },
-    {
-      name: 'Set of Wooden Spoons',
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      ingredients: ['wood', 'sugar', 'salt'],
-      category: categories[1]._id,
-    },
-    {
-      name: 'Camera',
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      ingredients: ['wood', 'sugar', 'salt'],
-      category: categories[2]._id,
-      
-    },
-    {
-      name: 'Tablet',
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      ingredients: ['wood', 'sugar', 'salt'],
-      category: categories[2]._id,
-    },
-    {
-      name: 'Tales at Bedtime',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
+        'The fastest, most budget-friendly dinner ever. There is nothing more budget-friendly than a pack of ramen noodles, but they are not the healthiest thing in the world. Why? That super sodium-laded seasoning packet, primarily. So, just ditch the salty powder, and use the noodles to make something delicious',
+      image: 'sesame-noodles.jpg',
       price: 9.99,
-      ingredients: ['wood', 'sugar', 'salt'],
+      ingredients: ['3 3 oz packages instant ramen noodles flavor packets discarded','¼ cup low sodium soy sauce', '¼ cup oyster sauce or hoisin sauce if vegetarian','1 tbsp rice vinegar', '1 tbsp brown sugar', '1 tbsp siracha', '3/4 cup water', '2 tbsp toasted sesame oil', '4 cloves garlic', '1 tsp freshly grated ginger', '4 green onions', '1 tsp sesame seeds'],
+      category: categories[0]._id,
+    },
+    {
+      name: 'Cauliflower Curry',
+      description:
+        'Easy, rich, creamy and warmly-spiced this vegan cauliflower-loaded coconut curry redefines comfort food.',
+      image: 'cauliflower-curry.jpg',
+      price: 11.99,
+      ingredients: ['1 tbsp olive oil', '1 medium yellow onion', '3 cloves garlic', '1 tbsp fresh ginger', '3 tbsp yellow curry powder', '2 tsp cinnamon', '2tsp cumin', '2 tsp sea salt', '1 can diced tomatoes', '3 cans coconut milk'],
+      category: categories[0]._id,
+      
+    },
+    {
+      name: 'Wild Mushroom Risotto',
+      description:
+        'Our easy-peasy wild mushroom risotto recipe is so richly flavorful you will want to find any excuse to make it again.',
+      image: 'mushroom-risotto.jpg',
+      price: 11.99,
+      ingredients: ['wild mushroom', 'butter', 'salsmall shallots', 'garlic cloves', 'fresh thyme sprigs', 'salt', 'freshly ground pepper', 'dry white wine', 'lemon juice', 'chicken stock (or vegetable)', 'Rice', 'heavy cream', 'parmesan cheese'],
+      category: categories[0]._id,
+    },
+    {
+      name: 'Sticky Pork Neck Soft Tacos',
+      description:
+        'Call that a taco! One of our favorite recipes, made with pork neck bones, marinated in a flavorful blend of spices and herbs, and then wrapped in a soft, flaky tortilla.',
+      image: 'sticky-pork.jpg',
+      price: 14.99,
+      ingredients: ['pork neck', 'light soy sauce', 'sunny honey', 'sunflower oil', 'tomatoes', 'red onion', 'Finely grated zest', 'small white tortillas', 'avocado'],
+      category: categories[1]._id,
+    },
+    {
+      name: 'Mexican Meatball Subs',
+      description:
+        'Tasty Mexican meatballs for dinner become subs for lunch with this versatile mid-week meal.',
+      image: 'mexican-meatball.jpg',
+      price: 12.99,
+      ingredients: ['taco seasoning mixture', 'pork and veal mince', 'egg', 'breadcrumbs', 'bunch parsley', 'extra virgin olive oil', 'red onions', 'red capsicums', 'garlic cloves', 'black beans', 'tomatoes', 'dinner rolls', 'Avocado', 'Coriander', 'Lime', 'Sour Cream'],
+      category: categories[1]._id,
+      
+    },
+    {
+      name: 'Mexican Roast Beef with Hot Sauce and Spicy Sweet Potato Wedges',
+      description:
+        'Spicy Mexican roast beef with hot sauce and sweet potato wedges is a dinner party winner.',
+      image: 'mexican-roast-beef.jpg',
+      price: 16.99,
+      ingredients: ['garlic', 'smoked paprika', 'ground chipotle chilli', 'limes', 'tequila', 'ground cumin', 'olive oil', 'beef eye fillet', 'red capsicum', 'jalapeno', 'tomato', 'orange juice', 'Worcestershire sauce', 'balsamic vinegar', 'spicy sweet potato'],
+      category: categories[1]._id,
+    },
+    {
+      name: 'Black Bean and Corn Nachos',
+      description:
+        'This nacho tray bake might be the greatest of all time! Just go heavy on the corn, sour cream and greenery to make you feel better about its 3am postprandial decadence.',
+      image: 'updateblackbean.jpg',
+      price: 12.99,
+      ingredients: ['extra virgin olive oil', 'corn cobs', 'red onion', 'red capsicum', 'garlic cloves', 'ground cumin', 'coriander', 'chipotle chillies', 'bay leaf', 'tomatoes', 'black beans', 'vegetable stock', 'corn chips', 'cheddar', 'avocados', 'lime'],
+      category: categories[1]._id,
+    },
+    {
+      name: 'Chow Mein',
+      description:
+        'The exact origins of chow mein are not entirely clear, but historians suspect this dish was born in northern China millennia ago. Thousands of years later, it has been popularized by a beloved chain with a cute panda mascot.',
+      image: 'chow-mein.jpg',
+      price: 12.99,
+      ingredients: ['oyster sauce', 'soy sauce', 'garlic', 'ginger', 'Sriracha', 'Hong Kong-style pan-fried noodles', 'canola oil', 'shiitake mushrooms', 'baby bok choy', 'bean sprouts', 'salt'],
+      category: categories[2]._id,
+    },
+    {
+      name: 'Cashew Chicken',
+      description:
+        'This cashew chicken with tender stir-fried chicken and roasted cashews in garlic sauce tastes just like take-out.',
+      image: 'cashew-chicken.jpg',
+      price: 12.99,
+      ingredients: ['chicken breast', 'garlic cloves', 'scallions', 'hoisin sauce', 'soy sauce', 'black pepper', 'corn starch', 'cashews', 'water', 'rice vinegar', 'sesame oil', 'vegetable oil', 'salt'],
+      category: categories[2]._id,
+    },
+    {
+      name: 'Beef and Broccoli',
+      description:
+        'Beef and broccoli is one of the most popular Chinese dishes here in the US, and for good reason. Juicy steak plus crunchy broccoli is a match made in heaven. ',
+      image: 'beef-broccoli.jpg',
+      price: 13.99,
+      ingredients: ['Oyster Sauce', 'Sesame Oil', 'Soy Sauce', 'Sugar', 'Cornstarch', 'Flank Steak', 'Ginger', 'Broccoli'],
+      category: categories[2]._id,
+    },
+    {
+      name: 'Chicken Fried Rice',
+      description:
+        'Garlic powder and soy sauce give bold flavors to this dish. It is a great way to start your day. Jump into this Chinese dish and you will be hooked.',
+      image: 'chicken-fried-rice.jpg',
+      price: 11.99,
+      ingredients: ['butter', 'white rice', 'sweet peas', 'carrots', 'eggs', 'onion', 'green onion', 'garlic powder', 'soy sauce', 'chicken breast', 'salt and pepper'],
+      category: categories[2]._id,
+    },
+    {
+      name: 'Chicken Parmesan',
+      description:
+        'Chicken parmesan (parmigiana) is the ultimate chicken dinner comfort food. Soft and tender chicken with a crispy, breaded coating covered in a rich tomato sauce, and topped with golden melted mozzarella and parmesan cheese. This crowd favourite is much easier to make than you might think. Serve it on its own or over a bed of spaghetti pasta.',
+      image: 'chicken-parm.jpg',
+      price: 14.99,
+      ingredients: ['chicken breasts', 'breaded coating', 'eggs', 'vegetable oil', 'tomato sauce', 'mozzarella cheese', 'Parmesan cheese', 'fresh parsley', 'noodles'],
       category: categories[3]._id,
     },
-   
+    {
+      name: 'Meat Lasagna',
+      description:
+        'Classic easy meat lasagna is the ultimate Italian comfort food that we all know and love. Layers of tender lasagna, meaty tomato sauce, a creamy cheese filling, with extra melted cheese on top, and a perfect, crispy crackly crust.',
+      image: 'lasagna.jpg',
+      price: 14.99,
+      ingredients: ['lasagna noodles', 'olive oil', 'ground beef', 'onion', 'garlic', 'tomato sauce', 'tomato paste', 'parsley', 'ricotta cheese', 'mozzarella cheese', 'parmesan cheese'],
+      category: categories[3]._id,
+    },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[3]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[3]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[4]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[4]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[4]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[4]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[5]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[5]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[5]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[5]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[6]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[6]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[6]._id,
+    // },
+    // {
+    //   name: 'Tales at Bedtime',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+    //   image: 'bedtime-book.jpg',
+    //   price: 9.99,
+    //   ingredients: ['wood', 'sugar', 'salt'],
+    //   category: categories[6]._id,
+    // },
   ]);
 
   console.log('Dish seeded');
