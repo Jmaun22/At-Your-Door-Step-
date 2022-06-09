@@ -116,13 +116,9 @@ const Home = () => {
       placeholder="Dish Name"
       aria-label="Username"
       aria-describedby="basic-addon1"
-
-    
     />
       </InputGroup>
     {/* description */}
-   
-
   <InputGroup className="mb-3">
     <InputGroup.Text id="basic-addon1" >📝</InputGroup.Text>
     <FormControl name="description" onChange={handleChange}
@@ -132,11 +128,14 @@ const Home = () => {
     />
   </InputGroup>
 {/* image */}
-<div className="m-3">
-      <label className="mx-3">🖼️ Choose image: </label>
-      <input className="d-none" type="file" name="image" onChange={handleChange}/>
-      <button className="btn btn-outline-primary">Upload food pic</button>
-    </div>
+  <InputGroup className="mb-3">
+    <InputGroup.Text id="basic-addon1" >🖼️</InputGroup.Text>
+    <FormControl name="image" onChange={handleChange}
+      placeholder="URL"
+      aria-label="Username"
+      aria-describedby="basic-addon1"
+    />
+  </InputGroup>
 {/* price */}
 <InputGroup className="mb-3">
     <InputGroup.Text >💰$</InputGroup.Text>
