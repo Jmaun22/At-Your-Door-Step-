@@ -144,7 +144,7 @@ const resolvers = {
       const dish = await Dish.create(args);
       return dish;
     },
-    removeDish: async (parent, args) => {
+    removeDish: async (parent, args, context) => {
       if (context.user) {
         console.log(args)
         const deleteDish = await Dish.findOneAndDelete({_id: args._id})
