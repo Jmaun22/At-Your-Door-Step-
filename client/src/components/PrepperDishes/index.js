@@ -44,6 +44,7 @@ function DishListPrepper() {
         <div className="flex-row">
     
           {userData.map((dish) => (
+            <div>
             <DishItem
               key={dish._id}
               _id={dish._id}
@@ -51,8 +52,9 @@ function DishListPrepper() {
               name={dish.name}
               price={dish.price}
               quantity={dish.quantity}
-        
             />
+            <button onClick={() => handleDeleteDish(dish.id)}>Delete</button>
+            </div>
           ))}
         </div>
       ) : (
