@@ -15,6 +15,8 @@ function DishList() {
   const { loading, data } = useQuery(QUERY_DISHES);
 
   useEffect(() => {
+    console.log("--------Loading---------")
+    console.log(data)
     if (data) {
       dispatch({
         type: UPDATE_DISHES,

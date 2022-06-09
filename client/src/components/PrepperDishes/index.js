@@ -11,25 +11,25 @@ function DishListPrepper() {
   const { loading, data } = useQuery(QUERY_MY_DISHES);
   const userData = data?.myDishes || {};
 
-  const [deleteBook] = useMutation(REMOVE_BOOK);
+  // const [deleteBook] = useMutation(REMOVE_BOOK);
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteBook = async (dishId) => {
-    const token = Auth.loggedIn() ? Auth.getToken() : null;
+  // const handleDeleteBook = async (dishId) => {
+  //   const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-    if (!token) {
-      return false;
-    }
+  //   if (!token) {
+  //     return false;
+  //   }
 
-    try {
-      console.log(dishId)
-      const { data } = await deleteBook({
-        variables: { dishId },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  //   try {
+  //     console.log(dishId)
+  //     const { data } = await deleteBook({
+  //       variables: { dishId },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   // if data isn't here yet, say so
   if (loading) {
