@@ -16,6 +16,7 @@ function DishListPrepper() {
   const [deleteDish] = useMutation(REMOVE_DISH);
 
   const handleDeleteDish = async (dishId) => {
+
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -53,7 +54,7 @@ function DishListPrepper() {
               price={dish.price}
               quantity={dish.quantity}
             />
-            <button onClick={() => handleDeleteDish(dish.id)}>Delete</button>
+            <button onClick={() => handleDeleteDish(dish._id)}>Delete</button>
             </div>
           ))}
         </div>

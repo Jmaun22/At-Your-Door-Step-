@@ -100,28 +100,28 @@ db.once('open', async () => {
 
   console.log('Dish seeded');
 
-  await User.deleteMany();
+  // await User.deleteMany();
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        dishes: [dishes[0]._id, dishes[0]._id, dishes[1]._id]
-      }
-    ]
-  });
+  // await User.create({
+  //   firstName: 'Pamela',
+  //   lastName: 'Washington',
+  //   email: 'pamela@testmail.com',
+  //   password: 'password12345',
+  //   orders: [
+  //     {
+  //       dishes: [dishes[0]._id, dishes[0]._id, dishes[1]._id]
+  //     }
+  //   ]
+  // });
 
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
+  // await User.create({
+  //   firstName: 'Elijah',
+  //   lastName: 'Holt',
+  //   email: 'eholt@testmail.com',
+  //   password: 'password12345'
+  // });
 
-  console.log('users seeded');
+  // console.log('users seeded');
 
   process.exit();
 });

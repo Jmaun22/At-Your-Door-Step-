@@ -25,8 +25,8 @@ export const ADD_DISH = gql`
 `;
 
 export const REMOVE_DISH = gql`
-  mutation removeDish($dishID: ID!) {
-    removeDish(_id: $dishID) {
+  mutation removeDish($dishID: String!) {
+    removeDish( _id: $dishID) {
       _id
       name
    }
