@@ -12,7 +12,7 @@ export const LOGIN = gql`
 `;
 
 export const ADD_DISH = gql`
-  mutation addDish($name: String!, $description: String, $image: String, $price: Int!, $category: String!, $ingredients: String!) {
+  mutation addDish($name: String!, $description: String, $image: String, $price: String!, $category: String!, $ingredients: String!) {
     addDish(name: $name, description: $description, image: $image, price: $price, category: $category, ingredients: $ingredients) {
       _id
       name

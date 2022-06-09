@@ -33,10 +33,8 @@ const Home = () => {
    console.log(formState)
     try {
       console.log(formState.price)
-      formState.price = parseInt(formState.price)
-      console.log(formState)
-      const mutationResponse = await addDish({
-        variables: { ...formState },
+      const { mutationResponse } = await addDish({
+        variables: formState,
       });
       console.log(mutationResponse);
   
