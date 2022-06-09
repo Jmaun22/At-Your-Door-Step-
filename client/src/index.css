@@ -229,13 +229,22 @@ input:focus {
 }
 .flex-rowsignup{
   display: flex;
-  justify-content: space-between;
-  margin-right: 10px;
+  flex-direction: row;
+
+  /* justify-content: space-between; */
+  margin-right: 50px;
   margin-top: 10px;
 
 }
 .space-between {
   justify-content: space-between;
+}
+.login-signup{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-right: 80px;
 }
 
 .flex-end {
@@ -285,7 +294,7 @@ input:focus {
 }
 
 .card {
-  width: 25%;
+  width: 100%;
   text-align: center;
 }
 

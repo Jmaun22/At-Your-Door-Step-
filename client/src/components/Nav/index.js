@@ -7,6 +7,7 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
+        <div className="login-signup">
         <ul className="flex-row-signup">
           <li className="mx-1">
             <Link to="/orderHistory">
@@ -20,13 +21,16 @@ function Nav() {
             </a>
           </li>
         </ul>
+        </div>
       );
     } else {
       return (
-        <ul className="flex-rowsignup" >
+        <div className="login-signup">
+        <ul className="flex-row" >
           <li className="mx-1">
             <Link to="/signup">
               Signup
+            
             </Link>
           </li>
           <li className="mx-1">
@@ -35,6 +39,7 @@ function Nav() {
             </Link>
           </li>
         </ul>
+        </div>
       );
     }
   }
