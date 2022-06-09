@@ -145,8 +145,15 @@ const resolvers = {
       return dish;
     },
     removeDish: async (parent, args) => {
-      return args
-    }
+      if (args) {
+        console.log(args)
+        // const deleteDish = await User.findOneAndDelete({_id})
+
+        // return updatedUser;
+      }
+
+      throw new AuthenticationError("Please log in!");
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
