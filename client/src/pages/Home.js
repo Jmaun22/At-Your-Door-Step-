@@ -23,7 +23,7 @@ import PrepperDishes from "../components/PrepperDishes";
 const Home = () => {
 
 
-  const [formState, setFormState] = useState({ name: '', description: '', image: '',price: '', category: '', ingredients: ''});
+  const [formState, setFormState] = useState({ name: '', description: '', image: '', price: '', category: '', ingredients: ''});
   const [addDish, { error }] = useMutation(ADD_DISH);
 
   const handleFormSubmit = async (event) => {
@@ -32,6 +32,9 @@ const Home = () => {
    console.log('working')
    console.log(formState)
     try {
+      console.log(formState.price)
+      formState.price = parseInt(formState.price)
+      console.log(formState)
       const mutationResponse = await addDish({
         variables: { ...formState },
       });

@@ -136,6 +136,7 @@ const resolvers = {
       return await Dish.findById(_id);
     },
     addDish: async (parent, args, context) => {
+      console.log("adding dish")
       args.ingredients = args.ingredients.split(',');
 
       const catId = await Category.findOne({name: args.category}).exec();
