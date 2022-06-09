@@ -44,7 +44,7 @@ function DishListPrepper() {
 
   return (
     <div className="my-2">
-      <h2>Our Food:</h2>
+      <h2>User Dishes:</h2>
       {userData.length ? (
         <div className="flex-row">
     

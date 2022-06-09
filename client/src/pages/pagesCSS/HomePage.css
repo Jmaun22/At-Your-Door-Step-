@@ -9,6 +9,39 @@
     justify-content: center;
     align-items: center;
 }
+.prepper-module{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 10px;
+}
+.prepper-module h1{
+    font-size: 2rem;
+    color: var(--dark);
+}
+.prepper-module button{
+    font-size: .75rem;
+    border-radius: 20px;
+}
+
+.our-dishes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    color: var(--dark);
+    gap: 30px;
+    
+    
+}
+.our-dishes h3{
+    font-size: 1rem;
+    color: var(--dark);
+}
+
 .backRoundDiv {
     background-color: #f5f5f5;
     border-radius: 50%;
@@ -17,4 +50,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.prepper-benfits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 30px;
+    color: var(--dark);
+}
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2rem;
+    color: 'red';
+}
+/* --primary: #B5CDA3;
+--secondary: #C9E4C5;
+--tertiary: #B5CDA3;
+--light: #fafafa;
+--dark: #9EB23B; */
+.prepperbtn {
+    color: rgb(120, 171, 44);
+
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.text-inhomepage{
+    color: #B5CDA3;
+
+
+};
+
+
+#add-dish {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }

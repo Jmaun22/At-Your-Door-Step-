@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
-import { InputGroup, FormControl, Dropdown, DropdownButton} from "react-bootstrap";
+import { InputGroup, FormControl, Dropdown, DropdownButton, Card} from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { ADD_DISH } from "../utils/mutations";
 
@@ -67,7 +67,7 @@ const Home = () => {
 
     <button>
       
-        <Link to="/prepper">
+        <Link to="/prepper" className="prepperbtn">
         Click to Get started
             </Link>
       </button>
@@ -76,12 +76,17 @@ const Home = () => {
 
     <div>
 
-    <h1> Lets get started</h1>
+{/* add a dish div */}
+
+   <div className="prepper-module">
+    <h1> Lets get started as a Prepper 🚀</h1>
 
 
-    <Button variant="primary" onClick={handleShow}>
-       Get prepping add a Dish!!
-      </Button>
+   
+      <button onClick={handleShow}  id='module-btn' >
+      Get prepping add a Dish!!🍲
+      </button>
+      </div>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -186,11 +191,47 @@ const Home = () => {
  
    
      </div>
+     <div className="prepper-benfits">
+     <Card className="bg-dark text-white">
+  <Card.Img src="images/cash.jpg" alt="Card image" />
+  <Card.ImgOverlay>
+    <Card.Title>Cash☘️</Card.Title>
    
+    <Card.Text> Make some meal earn some extra cash!!</Card.Text>
+  </Card.ImgOverlay>
+</Card>
 
-     <h1>Your prepper dishes</h1>
+<Card className="bg-dark text-white">
+  <Card.Img src="images/schedule.jpg" alt="Card image" />
+  <Card.ImgOverlay>
+    <Card.Title>Own your schedule🗓</Card.Title>
+    <Card.Text>
+      Make meals on your own time and schedule them to be made at your own time!!
+    </Card.Text>
+ 
+  </Card.ImgOverlay>
+</Card>
+
+<Card className="bg-dark text-white">
+  <Card.Img src="images/call.jpg" alt="Card image" />
+  <Card.ImgOverlay>
+    <Card.Title>Support at every turn📞</Card.Title>
+  
+    <Card.Text>Get support every step of the way reach out to us!</Card.Text>
+  </Card.ImgOverlay>
+</Card>
+
+
+
+
+     </div>
+   
+    <div className="our-dishes"> 
+     <h1>Your prepper dishes 🥣</h1>
      <PrepperDishes />
-      <DishList />
+
+     </div>
+
  
 
      <div>
