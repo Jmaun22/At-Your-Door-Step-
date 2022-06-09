@@ -5,6 +5,7 @@ const typeDefs = gql`
     _id: ID
     name: String
   }
+  
 
   type Dish {
     _id: ID
@@ -14,6 +15,7 @@ const typeDefs = gql`
     price: Float
     ingredients: [String]
     category: Category
+    prepper: User
   }
 
   type Order {
@@ -38,6 +40,7 @@ const typeDefs = gql`
   type Checkout {
     session: ID
   }
+  
 
   type Auth {
     token: ID
