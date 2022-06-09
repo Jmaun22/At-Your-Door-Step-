@@ -64,7 +64,7 @@ const typeDefs = gql`
     updateDish(_id: ID!): Dish
     removeDish(_id: ID!): Dish
     login(email: String!, password: String!): Auth
-    addDish(name: String!, description: String, image: String, price: String!, category: String!, ingredients: String!): Dish
+    addDish(name: String!, ingredients: String!, price: String!, category: String!): Dish
   }
 `;
 

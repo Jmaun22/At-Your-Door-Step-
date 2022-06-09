@@ -143,6 +143,7 @@ const resolvers = {
       args.category = catId._id
       
       const dish = await Dish.create(args);
+      console.log("dish added")
       return dish;
     },
     removeDish: async (parent, args) => {

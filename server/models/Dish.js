@@ -16,23 +16,22 @@ const dishSchema = new Schema({
   },
   price: {
     type: Number,
-    required: true,
+    // required: true,
     min: 0.99
   },
   ingredients: [{
     type: String,
-    required: true,
-    trim: true
+    // required: true,
+    // trim: true
   }],
   category: {
     type: Schema.Types.ObjectId,
     ref: 'Category',
-    required: true
+    // required: true
   },
   prepper: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    
   },
 });
 

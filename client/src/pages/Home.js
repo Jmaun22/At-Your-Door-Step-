@@ -32,9 +32,17 @@ const Home = () => {
    console.log('working')
    console.log(formState)
     try {
+      console.log(formState.name)
       console.log(formState.price)
+      console.log(formState.category)
+      console.log(formState.ingredients)
       const { mutationResponse } = await addDish({
-        variables: formState,
+        variables: {
+          name: formState.name,
+          ingredients: formState.ingredients,
+          price: formState.price,
+          category: formState.category
+        },
       });
       console.log(mutationResponse);
   
@@ -134,7 +142,7 @@ const Home = () => {
   </InputGroup>
   {/* ingredients */}
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Control type="" name='ingredients' placeholder="🧂Ingredients" onChange={handleChange} />
+    <FormControl type="" name='ingredients' placeholder="🧂Ingredients" onChange={handleChange} />
   </Form.Group>
 
 
