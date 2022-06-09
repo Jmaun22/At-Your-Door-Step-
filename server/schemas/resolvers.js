@@ -136,8 +136,6 @@ const resolvers = {
       return await Dish.findById(_id);
     },
     addDish: async (parent, args, context) => {
-      console.log("adding dish")
-      console.log(context.user)
       args.ingredients = args.ingredients.split(',');
       args.prepper = context.user._id
 
@@ -145,11 +143,9 @@ const resolvers = {
       args.category = catId._id
       
       const dish = await Dish.create(args);
-      console.log("dish added")
       return dish;
     },
     removeDish: async (parent, args) => {
-        console.log(args)
         const deleteDish = await Dish.findOneAndDelete({_id: args._id})
 
         return deleteDish;
