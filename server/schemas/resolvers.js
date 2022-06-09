@@ -137,7 +137,9 @@ const resolvers = {
     },
     addDish: async (parent, args, context) => {
       console.log("adding dish")
+      console.log(context.user)
       args.ingredients = args.ingredients.split(',');
+      args.prepper = context.user._id
 
       const catId = await Category.findOne({name: args.category}).exec();
       args.category = catId._id
