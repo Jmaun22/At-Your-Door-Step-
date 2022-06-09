@@ -46,7 +46,7 @@ function DishItem(item) {
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p style={{ textDecoration: 'none' }}>{name}</p>
       </Link>
       <div>
         <span>${price}</span>

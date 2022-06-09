@@ -46,10 +46,10 @@ function DishList() {
   }
 
   return (
-    <div className="my-2">
-      <h2>Our Food:</h2>
+    <div className="my-2" >
+      <h2>Our Food:  🥗</h2>
       {state.dishes.length ? (
-        <div className="flex-row">
+        <div className="flex-row-customer dish-css">
           {filterDishes().map((dish) => (
             <DishItem
               key={dish._id}

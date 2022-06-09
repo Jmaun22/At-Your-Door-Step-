@@ -17,7 +17,7 @@ import Nav from './components/Nav';
 import { StoreProvider, StorePrepper } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
-import Prepper from './pages/Prepper';
+import Customer from './pages/Customer';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -68,7 +68,7 @@ function App() {
               />
               <Route
               path="/prepper"
-              element={<Prepper />}
+              element={<Customer />}
 
               />
 
