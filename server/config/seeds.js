@@ -98,7 +98,7 @@ db.once('open', async () => {
    
   ]);
 
-  console.log('Dish seeded');
+  // console.log('Dish seeded');
 
   // await User.deleteMany();
 

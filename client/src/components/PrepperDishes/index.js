@@ -13,15 +13,18 @@ function DishListPrepper() {
   const { loading, data } = useQuery(QUERY_MY_DISHES);
   const userData = data?.myDishes || {};
 
+
   const [deleteDish] = useMutation(REMOVE_DISH);
 
   const handleDeleteDish = async (dishId) => {
 
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-    if (!token) {
-      return false;
-    }
+
+  //   if (!token) {
+  //     return false;
+  //   }
+
 
     try {
       console.log(dishId)
@@ -32,6 +35,7 @@ function DishListPrepper() {
       console.error(err);
     }
   };
+
 
   // if data isn't here yet, say so
   if (loading) {
