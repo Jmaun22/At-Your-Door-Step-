@@ -9,14 +9,12 @@ import spinner from '../../assets/spinner.gif';
 
 function DishListPrepper() {
   const { loading, data } = useQuery(QUERY_MY_DISHES);
-  console.log(data)
   const userData = data?.myDishes || {};
-  console.log(userData)
 
   // const [deleteBook] = useMutation(REMOVE_BOOK);
 
-  // // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  // const handleDeleteBook = async (bookId) => {
+  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+  // const handleDeleteBook = async (dishId) => {
   //   const token = Auth.loggedIn() ? Auth.getToken() : null;
 
   //   if (!token) {
@@ -24,13 +22,10 @@ function DishListPrepper() {
   //   }
 
   //   try {
-  //     console.log(bookId)
+  //     console.log(dishId)
   //     const { data } = await deleteBook({
-  //       variables: { bookId },
+  //       variables: { dishId },
   //     });
-
-  //     // upon success, remove book's id from localStorage
-  //     removeBookId(bookId);
   //   } catch (err) {
   //     console.error(err);
   //   }
