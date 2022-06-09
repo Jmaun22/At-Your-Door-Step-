@@ -4,6 +4,7 @@ import { useMyDishesContext } from '../../utils/GlobalState';
 import { UPDATE_DISHES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
 import { QUERY_MY_DISHES } from '../../utils/queries';
+import { REMOVE_DISH } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
@@ -11,10 +12,9 @@ function DishListPrepper() {
   const { loading, data } = useQuery(QUERY_MY_DISHES);
   const userData = data?.myDishes || {};
 
-  const [deleteBook] = useMutation(REMOVE_BOOK);
+  const [deleteDish] = useMutation(REMOVE_DISH);
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteBook = async (dishId) => {
+  const handleDeleteDish = async (dishId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -23,7 +23,7 @@ function DishListPrepper() {
 
     try {
       console.log(dishId)
-      const { data } = await deleteBook({
+      const { data } = await deleteDish({
         variables: { dishId },
       });
     } catch (err) {
