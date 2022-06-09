@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ProductItem from '../ProductItem';
+import DishItem from '../DishItem';
 import { useMyDishesContext } from '../../utils/GlobalState';
 import { UPDATE_DISHES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -48,7 +48,7 @@ function DishListPrepper() {
         <div className="flex-row">
     
           {userData.map((dish) => (
-            <ProductItem
+            <DishItem
               key={dish._id}
               _id={dish._id}
               image={dish.image}

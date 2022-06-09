@@ -1,7 +1,7 @@
 import React from "react";
 
 import DishList from "../components/DishList";
-import CategoryMenu from "../components/CategoryMenu";
+// import CategoryMenu from "../components/CategoryMenu";
 
 
 import Cart from "../components/Cart";
@@ -184,18 +184,22 @@ const Home = () => {
 
 
  
-  
+   
      </div>
+   
 
      <h1>Your prepper dishes</h1>
      <PrepperDishes />
       <DishList />
-
+ 
 
      <div>
+  
+     <Cart />
 
-      <Cart />
+     </div> 
     </div> 
+
   );
 };
 
