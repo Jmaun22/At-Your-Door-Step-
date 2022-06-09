@@ -42,7 +42,8 @@ function DishItem(item) {
   return (
     <div className="card px-1 py-1">
       <Link to={`/dishes/${_id}`}>
-        <img
+        <img 
+        className="dish-img-size"
           alt={name}
           src={`/images/${image}`}
         />

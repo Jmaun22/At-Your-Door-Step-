@@ -23,7 +23,7 @@ import PrepperDishes from "../components/PrepperDishes";
 const Home = () => {
 
 
-  const [formState, setFormState] = useState({ name: '', description: '', image: '',price: '', category: '', ingredients: ''});
+  const [formState, setFormState] = useState({ name: '', description: '', image: '', price: '', category: '', ingredients: ''});
   const [addDish, { error }] = useMutation(ADD_DISH);
 
   const handleFormSubmit = async (event) => {
@@ -32,8 +32,21 @@ const Home = () => {
    console.log('working')
    console.log(formState)
     try {
-      const mutationResponse = await addDish({
-        variables: { ...formState },
+      console.log(formState.name)
+      console.log(formState.price)
+      console.log(formState.category)
+      console.log(formState.ingredients)
+      console.log(formState.description)
+      console.log(formState.image)
+      const { mutationResponse } = await addDish({
+        variables: {
+          name: formState.name,
+          ingredients: formState.ingredients,
+          price: formState.price,
+          category: formState.category,
+          description: formState.description,
+          image: formState.image
+        },
       });
       console.log(mutationResponse);
   
@@ -103,13 +116,9 @@ const Home = () => {
       placeholder="Dish Name"
       aria-label="Username"
       aria-describedby="basic-addon1"
-
-    
     />
       </InputGroup>
     {/* description */}
-   
-
   <InputGroup className="mb-3">
     <InputGroup.Text id="basic-addon1" >📝</InputGroup.Text>
     <FormControl name="description" onChange={handleChange}
@@ -119,11 +128,14 @@ const Home = () => {
     />
   </InputGroup>
 {/* image */}
-<div className="m-3">
-      <label className="mx-3">🖼️ Choose image: </label>
-      <input className="d-none" type="file" name="image" onChange={handleChange}/>
-      <button className="btn btn-outline-primary">Upload food pic</button>
-    </div>
+  <InputGroup className="mb-3">
+    <InputGroup.Text id="basic-addon1" >🖼️</InputGroup.Text>
+    <FormControl name="image" onChange={handleChange}
+      placeholder="URL"
+      aria-label="Username"
+      aria-describedby="basic-addon1"
+    />
+  </InputGroup>
 {/* price */}
 <InputGroup className="mb-3">
     <InputGroup.Text >💰$</InputGroup.Text>
@@ -133,7 +145,7 @@ const Home = () => {
   </InputGroup>
   {/* ingredients */}
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Control type="" name='ingredients' placeholder="🧂Ingredients" onChange={handleChange} />
+    <FormControl type="" name='ingredients' placeholder="🧂Ingredients" onChange={handleChange} />
   </Form.Group>
 
 

@@ -12,21 +12,17 @@ export const LOGIN = gql`
 `;
 
 export const ADD_DISH = gql`
-  mutation addDish($name: String!, $description: String, $image: String, $price: Int!, $category: String!, $ingredients: String!) {
-    addDish(name: $name, description: $description, image: $image, price: $price, category: $category, ingredients: $ingredients) {
+  mutation addDish($name: String!, $ingredients: String!, $price: String!, $category: String!, $description: String, $image: String) {
+    addDish(name: $name, ingredients: $ingredients, price: $price, category: $category, description: $description, image: $image) {
       _id
       name
-      description
-      price
-      category
-      image
    }
   }
 `;
 
 export const REMOVE_DISH = gql`
-  mutation removeDish($dishID: String!) {
-    removeDish( _id: $dishID) {
+  mutation removeDish($dishId: ID!) {
+    removeDish( _id: $dishId) {
       _id
       name
    }

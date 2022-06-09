@@ -14,16 +14,16 @@ function DishListPrepper() {
   const userData = data?.myDishes || {};
 
 
-  const [deleteDish] = useMutation(REMOVE_DISH);
+  const [deleteDish, { error }] = useMutation(REMOVE_DISH);
 
   const handleDeleteDish = async (dishId) => {
 
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
 
-  //   if (!token) {
-  //     return false;
-  //   }
+    if (!token) {
+      return false;
+    }
 
 
     try {

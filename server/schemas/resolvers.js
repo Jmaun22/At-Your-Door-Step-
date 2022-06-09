@@ -137,6 +137,7 @@ const resolvers = {
     },
     addDish: async (parent, args, context) => {
       args.ingredients = args.ingredients.split(',');
+      args.prepper = context.user._id
 
       const catId = await Category.findOne({name: args.category}).exec();
       args.category = catId._id
@@ -145,7 +146,6 @@ const resolvers = {
       return dish;
     },
     removeDish: async (parent, args) => {
-        console.log(args)
         const deleteDish = await Dish.findOneAndDelete({_id: args._id})
 
         return deleteDish;
