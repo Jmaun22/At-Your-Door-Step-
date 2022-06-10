@@ -220,12 +220,18 @@ input:focus {
   display: flex;
   justify-content: space-between;
 }
+.flex-row-header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
 .flex-row-customer{
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-flow: row wrap;
   margin: 30px;
+
 }
 .flex-rowsignup{
   display: flex;
