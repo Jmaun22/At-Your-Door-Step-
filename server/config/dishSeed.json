@@ -89,7 +89,8 @@
       "image": "cashew-chicken.jpg",
       "price": 12.99,
       "ingredients": ["chicken breast", "garlic cloves", "scallions", "hoisin sauce", "soy sauce", "black pepper", "corn starch", "cashews", "water", "rice vinegar", "sesame oil", "vegetable oil", "salt"],
-      "category": categories[2]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Beef and Broccoli",
@@ -98,7 +99,8 @@
       "image": "beef-broccoli.jpg",
       "price": 13.99,
       "ingredients": ["Oyster Sauce", "Sesame Oil", "Soy Sauce", "Sugar", "Cornstarch", "Flank Steak", "Ginger", "Broccoli"],
-      "category": categories[2]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Chicken Fried Rice",
@@ -107,7 +109,8 @@
       "image": "chicken-fried-rice.jpg",
       "price": 11.99,
       "ingredients": ["butter", "white rice", "sweet peas", "carrots", "eggs", "onion", "green onion", "garlic powder", "soy sauce", "chicken breast", "salt and pepper"],
-      "category": categories[2]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Chicken Parmesan",
@@ -116,7 +119,8 @@
       "image": "chicken-parm.jpg",
       "price": 14.99,
       "ingredients": ["chicken breasts", "breaded coating", "eggs", "vegetable oil", "tomato sauce", "mozzarella cheese", "Parmesan cheese", "fresh parsley", "noodles"],
-      "category": categories[3]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Meat Lasagna",
