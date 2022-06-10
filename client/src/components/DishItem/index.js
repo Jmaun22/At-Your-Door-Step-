@@ -41,7 +41,7 @@ function DishItem(item) {
 
   return (
     <div className="card px-1 py-1">
-      <Link to={`/dishes/${_id}`}>
+      <Link to={`/dishes/${_id}`} style={{ textDecoration: 'none' }}>
         <img 
         className="dish-img-size"
           alt={name}
