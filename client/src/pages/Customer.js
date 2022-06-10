@@ -6,6 +6,7 @@ import '../pages/pagesCSS/HomePage.css';
 import Button from "react-bootstrap/Button";
 import Carousel from 'react-bootstrap/Carousel'
 import '../pages/pagesCSS/CustomerPage.css';
+import Footer from "../components/Footer";
 
 
 
@@ -78,6 +79,7 @@ const Customer = () => {
     
 
       <Cart />
+      <Footer />
 
     </div> 
   );

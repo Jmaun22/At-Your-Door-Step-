@@ -4,10 +4,13 @@
     color: #fafafa;
     bottom: 0;
     text-align: center;
+    display: flex;
+    /* position: absolute; */
+    width:100%;
     }
 
 .footer-bottom {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 

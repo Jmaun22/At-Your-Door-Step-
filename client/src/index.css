@@ -41,8 +41,9 @@ div {
   text-decoration: none;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
+
 p {
   
   color: var(--dark);
@@ -68,10 +69,10 @@ h1 {
   font-size: 2.25rem;
   text-decoration: none;
 }
-h1:hover {
+/* h1:hover {
   color: var(--primary);
 
-}
+} */
 
 h2 {
   display: flex;
@@ -182,6 +183,19 @@ input:focus {
   border: 1px solid var(--tertiary);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
+
+.at-your-doorstep-link:hover {
+  color: #dfffdb;
+}
+
+.back-to-dishes-link {
+  color: var(--tertiary);
+}
+
+.back-to-dishes-link:hover {
+  color: var(--dark);
+}
+
 .dish-img-size{
 
   width: 80%;

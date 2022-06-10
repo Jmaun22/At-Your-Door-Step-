@@ -13,6 +13,7 @@ import {
 import { QUERY_DISHES } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
+import Footer from '../components/Footer';
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -85,7 +86,7 @@ function Detail() {
     <>
       {currentDish && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Dishes</Link>
+          <Link className="back-to-dishes-link" to="/prepper">← Back to Dishes</Link>
 
           <h2>{currentDish.name}</h2>
 
@@ -110,6 +111,7 @@ function Detail() {
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
+      <Footer />
     </>
   );
 }

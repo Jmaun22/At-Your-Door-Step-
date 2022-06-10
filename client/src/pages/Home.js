@@ -14,7 +14,7 @@ import { useState } from "react";
 import { InputGroup, FormControl, Dropdown, DropdownButton, Card} from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { ADD_DISH } from "../utils/mutations";
-
+import Footer from "../components/Footer";
 import PrepperDishes from "../components/PrepperDishes";
 
 
@@ -241,7 +241,7 @@ const Home = () => {
     <div className="our-dishes"> 
      <h1>Your prepper dishes 🥣</h1>
      <PrepperDishes />
-
+      
      </div>
 
  
@@ -249,9 +249,12 @@ const Home = () => {
      <div>
   
      <Cart />
+     <Footer />
 
      </div> 
+    
     </div> 
+    
 
   );
 };
