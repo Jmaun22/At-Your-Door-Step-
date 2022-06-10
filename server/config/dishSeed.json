@@ -24,7 +24,8 @@
       "image": "cauliflower-curry.jpg",
       "price": 11.99,
       "ingredients": ["1 tbsp olive oil", "1 medium yellow onion", "3 cloves garlic", "1 tbsp fresh ginger", "3 tbsp yellow curry powder", "2 tsp cinnamon", "2tsp cumin", "2 tsp sea salt", "1 can diced tomatoes", "3 cans coconut milk"],
-      "category": categories[0]._id,
+      "category": "",
+      "prepper": ""
       
     },
     {
@@ -34,7 +35,8 @@
       "image": "mushroom-risotto.jpg",
       "price": 11.99,
       "ingredients": ["wild mushroom", "butter", "salsmall shallots", "garlic cloves", "fresh thyme sprigs", "salt", "freshly ground pepper", "dry white wine", "lemon juice", "chicken stock (or vegetable)", "Rice", "heavy cream", "parmesan cheese"],
-      "category": categories[0]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Sticky Pork Neck Soft Tacos",
@@ -43,7 +45,8 @@
       "image": "sticky-pork.jpg",
       "price": 14.99,
       "ingredients": ["pork neck", "light soy sauce", "sunny honey", "sunflower oil", "tomatoes", "red onion", "Finely grated zest", "small white tortillas", "avocado"],
-      "category": categories[1]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Mexican Meatball Subs",
@@ -52,7 +55,8 @@
       "image": "mexican-meatball.jpg",
       "price": 12.99,
       "ingredients": ["taco seasoning mixture", "pork and veal mince", "egg", "breadcrumbs", "bunch parsley", "extra virgin olive oil", "red onions", "red capsicums", "garlic cloves", "black beans", "tomatoes", "dinner rolls", "Avocado", "Coriander", "Lime", "Sour Cream"],
-      "category": categories[1]._id,
+      "category": "",
+      "prepper": ""
       
     },
     {
@@ -62,7 +66,8 @@
       "image": "mexican-roast-beef.jpg",
       "price": 16.99,
       "ingredients": ["garlic", "smoked paprika", "ground chipotle chilli", "limes", "tequila", "ground cumin", "olive oil", "beef eye fillet", "red capsicum", "jalapeno", "tomato", "orange juice", "Worcestershire sauce", "balsamic vinegar", "spicy sweet potato"],
-      "category": categories[1]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Black Bean and Corn Nachos",
@@ -71,7 +76,8 @@
       "image": "updateblackbean.jpg",
       "price": 12.99,
       "ingredients": ["extra virgin olive oil", "corn cobs", "red onion", "red capsicum", "garlic cloves", "ground cumin", "coriander", "chipotle chillies", "bay leaf", "tomatoes", "black beans", "vegetable stock", "corn chips", "cheddar", "avocados", "lime"],
-      "category": categories[1]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Chow Mein",
@@ -80,7 +86,8 @@
       "image": "chow-mein.jpg",
       "price": 12.99,
       "ingredients": ["oyster sauce", "soy sauce", "garlic", "ginger", "Sriracha", "Hong Kong-style pan-fried noodles", "canola oil", "shiitake mushrooms", "baby bok choy", "bean sprouts", "salt"],
-      "category": categories[2]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Cashew Chicken",
