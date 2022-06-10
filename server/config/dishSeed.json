@@ -6,7 +6,8 @@
       "image": "vegetarian-bowl.jpg",
       "price": 11.99,
       "ingredients": ["1 head of cauliflower", "1 green pepper", "1 red bell pepper", "1/2 onion", " 1/3 cup olive oil", "2 tbsp lime juice", "1/4 cup taco seasoning", "1 can black beans", "1/2 cup salsa", "2 cups romaine lettuce", "4 cups cilantro-lime rice" ],
-      "category": categories[0]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Sesame Garlic Ramen Noodles",
@@ -15,7 +16,8 @@
       "image": "sesame-noodles.jpg",
       "price": 9.99,
       "ingredients": ["3 3 oz packages instant ramen noodles flavor packets discarded","¼ cup low sodium soy sauce", "¼ cup oyster sauce or hoisin sauce if vegetarian","1 tbsp rice vinegar", "1 tbsp brown sugar", "1 tbsp siracha", "3/4 cup water", "2 tbsp toasted sesame oil", "4 cloves garlic", "1 tsp freshly grated ginger", "4 green onions", "1 tsp sesame seeds"],
-      "category": categories[0]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Cauliflower Curry",
@@ -272,7 +274,7 @@
     {
       "name": "Apple Pie",
       "description":
-        "Grandma, in her wisdom, suggested, "Maybe a slice of my homemade apple pie will make you feel better." One bite, and Grandma was right. ",
+        "Grandma, in her wisdom, suggested, 'Maybe a slice of my homemade apple pie will make you feel better.' One bite, and Grandma was right.",
       "image": "applepie.jpg",
       "price": 6.99,
       "ingredients": ["Dough", "sugar", "brown sugar", "all-purpose flour", "ground cinnamon", "ground ginger", "ground nutmeg", "tart apples", "lemon juice", "butter", "egg white"],
