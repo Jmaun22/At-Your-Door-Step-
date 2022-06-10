@@ -92,6 +92,17 @@ function Detail() {
 
           <p>{currentDish.description}</p>
 
+
+          {currentDish.ingredients ? (
+            <ul>
+              {currentDish.ingredients.map((ingredient) => (
+                <li>{ingredient}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>Loading</p>
+          )}
+
           <p>
             <strong>Price:</strong>${currentDish.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
