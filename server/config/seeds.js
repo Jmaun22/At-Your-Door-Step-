@@ -175,132 +175,132 @@ db.once('open', async () => {
       ingredients: ['lasagna noodles', 'olive oil', 'ground beef', 'onion', 'garlic', 'tomato sauce', 'tomato paste', 'parsley', 'ricotta cheese', 'mozzarella cheese', 'parmesan cheese'],
       category: categories[3]._id,
     },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[3]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[3]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[4]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[5]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
-    // {
-    //   name: 'Tales at Bedtime',
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-    //   image: 'bedtime-book.jpg',
-    //   price: 9.99,
-    //   ingredients: ['wood', 'sugar', 'salt'],
-    //   category: categories[6]._id,
-    // },
+    {
+      name: 'Fettuccine Alfredo',
+      description:
+        'Fettuccine alfredo is a classic Italian pasta dish that is rich, creamy, and delicious. Tender fettuccine noodles are tossed in a homemade alfredo sauce made creamy with heavy cream, butter, and Parmesan cheese, and seasoned with garlic, salt, and pepper. When you’re craving comfort food, nothing is better than creamy pasta, and when you really need some comfort, you want it asap.',
+      image: 'fettucine-alfredo.jpg',
+      price: 13.99,
+      ingredients: ['fettuccine noodles', 'salt', 'butter', 'garlic', 'heavy cream', 'Parmesan cheese', 'ground black pepper'],
+      category: categories[3]._id,
+    },
+    {
+      name: 'Homemade Calzones',
+      description:
+        'Homemade calzones are delicious little pizza pockets that are filled with cheese and toppings and baked until golden. They are an Italian favourite that are quick and easy to make at home. Plus, they reheat very well and are great for meal prep.',
+      image: 'calzone.jpg',
+      price: 12.99,
+      ingredients: ['pizza dough', 'pizza sauce', 'pepperoni', 'mushrooms', 'green peppers', 'mozzarella cheese', 'ricotta', 'egg'],
+      category: categories[3]._id,
+    },
+    {
+      name: 'Fried Catfish',
+      description:
+        'While Arkansas freshwater bodies are brimming with the state staple, authorities set a daily creel limit on many catfish species to ensure the streams and lakes maintain their abundance. In restaurants, you will often find the fried fish breaded with a mixture of flour, cornbread, and spices, and served alongside hushpuppies.',
+      image: 'fried-catfish.jpg',
+      price: 13.99,
+      ingredients: ['flour', 'cornbread', 'spices', 'hushpuppies', 'salt and pepper', 'french fries', 'coleslaw', 'catfish'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Lobster Mac n Cheese',
+      description:
+        'Nothing screams "New England" more than sweet lobster chunks, especially when they are baked into a delicious plate of mac and cheese.',
+      image: 'lobster.jpg',
+      price: 16.99,
+      ingredients: ['lobster', 'milk', 'cheese', 'butter'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Burnt Ends',
+      description:
+        'If burnt ends are not your favorite part of the brisket, you do not know what you are missing. The crispy, flavor-packed barbecue portions make for the perfect sandwich.',
+      image: 'burntends.jpg',
+      price: 13.99,
+      ingredients: ['brisket', 'bbq sauce', 'salt'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Delicous Prime-Rib',
+      description:
+        'Try our mouth savoring prime-rib. It will leave you speechless! One bite into this juicy peice of meat and you will fall in love.',
+      image: 'primerib.jpg',
+      price: 22.99,
+      ingredients: ['prime rib', 'mashed potatos', 'asparagus', 'butter'],
+      category: categories[4]._id,
+    },
+    {
+      name: 'Coca-Cola',
+      description:
+        'Crack open an ice cold bottle of Coca-Cola and you will be hit with a blast of refreshing goodness. This is a great way to start your day.',
+      image: 'coca-cola.jpg',
+      price: 2.99,
+      ingredients: ['coke', 'sugar'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Sprite',
+      description:
+        'Crack open an ice cold bottle of Sprite and you will be hit with a blast of refreshing goodness. This is an amazing way to start your day.',
+      image: 'sprite.jpg',
+      price: 2.99,
+      ingredients: ['sprite', 'sugar'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Mountain Dew',
+      description:
+        'Get all jacked up on Mountain Dew!! Do the Dew!!',
+      image: 'mountaindew.jpg',
+      price: 2.99,
+      ingredients: ['mountain dew', 'sugar'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Dr Pepper',
+      description:
+        'Did somebody call Dr Pepper? You are in luck. Crack open a bottle of Dr Pepper and you will be hit with a blast of refreshing goodness. If you are sick, this is bound to help you feel better.',
+      image: 'drpepper.jpg',
+      price: 2.99,
+      ingredients: ['dr pepper', 'sugar'],
+      category: categories[5]._id,
+    },
+    {
+      name: 'Hungarian Nut Rolls',
+      description:
+        'It isnt officially the holidays until Ive made this treasured nut roll recipe from my husbands grandmother.',
+      image: 'nutrolls.jpg',
+      price: 6.99,
+      ingredients: ['dry yeast', '2% milk ', 'sugar', 'salt', 'butter', 'sour cream', 'eggs', 'all-purpose flour', 'ground cinnamon', 'walnuts', 'apple' ],
+      category: categories[6]._id,
+    },
+    {
+      name: 'Grandmas Yeast Rolls',
+      description:
+        'Grandmas yeast rolls are so delicous they will put you in a coma!',
+      image: 'grandmasrolls.jpg',
+      price: 6.99,
+      ingredients: ['active dry yeast', '2% milk', 'sugar', 'unsweetened applesauce', 'egg whites', 'salt', 'all-purpose flour'],
+      category: categories[6]._id,
+    },
+    {
+      name: 'Grannys Spice Cookies',
+      description:
+        'Granny always had a batch of these delicious, crispy cookies waiting for us at her house.',
+      image: 'grannycookies.jpg',
+      price: 6.99,
+      ingredients: ['butter', 'sugar', 'egg', 'light corn syrup', 'grated orange zest', 'cold water', 'all-purpose flour', 'baking soda', 'ground cinnamon', 'ginger', 'ground cloves'],
+      category: categories[6]._id,
+    },
+    {
+      name: 'Apple Pie',
+      description:
+        'Grandma, in her wisdom, suggested, "Maybe a slice of my homemade apple pie will make you feel better." One bite, and Grandma was right. ',
+      image: 'applepie.jpg',
+      price: 6.99,
+      ingredients: ['Dough', 'sugar', 'brown sugar', 'all-purpose flour', 'ground cinnamon', 'ground ginger', 'ground nutmeg', 'tart apples', 'lemon juice', 'butter', 'egg white'],
+      category: categories[6]._id,
+    },
   ]);
 
   console.log('Dish seeded');
