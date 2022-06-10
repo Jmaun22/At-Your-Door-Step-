@@ -152,16 +152,18 @@
       "image": "fried-catfish.jpg",
       "price": 13.99,
       "ingredients": ["flour", "cornbread", "spices", "hushpuppies", "salt and pepper", "french fries", "coleslaw", "catfish"],
-      "category": categories[4]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Lobster Mac n Cheese",
       "description":
-        "Nothing screams "New England" more than sweet lobster chunks, especially when they are baked into a delicious plate of mac and cheese.",
+        "Nothing screams 'New England' more than sweet lobster chunks, especially when they are baked into a delicious plate of mac and cheese.",
       "image": "lobster.jpg",
       "price": 16.99,
       "ingredients": ["lobster", "milk", "cheese", "butter"],
-      "category": categories[4]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Burnt Ends",
@@ -170,7 +172,8 @@
       "image": "burntends.jpg",
       "price": 13.99,
       "ingredients": ["brisket", "bbq sauce", "salt"],
-      "category": categories[4]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Delicous Prime-Rib",
