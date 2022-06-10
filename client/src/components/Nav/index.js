@@ -45,7 +45,7 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
+    <header className="flex-row-header px-1">
       <h1>
         <Link to="/">
           <img
@@ -54,7 +54,7 @@ function Nav() {
            src="images/aydLogo.png"
            alt="Logo"
           />
-          <span>At Your Doorstep</span>
+          <span style={{ textSizeAdjust: '10px', verticalAlign: 'middle'}}>   At Your Doorstep</span>
         </Link>
       </h1>
 
