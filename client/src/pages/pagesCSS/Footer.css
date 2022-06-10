@@ -1,0 +1,22 @@
+.footer-middle { 
+    background: #B5CDA3;
+    padding-top: 3rem;
+    color: #fafafa;
+    bottom: 0;
+    text-align: center;
+    }
+
+.footer-bottom {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+ul li a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #dfffdb;
+    text-decoration: none;
+}
