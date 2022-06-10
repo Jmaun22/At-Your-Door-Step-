@@ -43,8 +43,13 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="C">🏘️ </span>
-          At Your Door Step
+          <img
+           style={{ width: 45 }}
+           className="ayd-logo-class"
+           src="images/aydLogo.png"
+           alt="Logo"
+          />
+          <span>At Your Doorstep</span>
         </Link>
       </h1>
 
