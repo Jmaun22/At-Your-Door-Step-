@@ -125,7 +125,8 @@
       "image": "lasagna.jpg",
       "price": 14.99,
       "ingredients": ["lasagna noodles", "olive oil", "ground beef", "onion", "garlic", "tomato sauce", "tomato paste", "parsley", "ricotta cheese", "mozzarella cheese", "parmesan cheese"],
-      "category": categories[3]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Fettuccine Alfredo",
@@ -134,7 +135,8 @@
       "image": "fettucine-alfredo.jpg",
       "price": 13.99,
       "ingredients": ["fettuccine noodles", "salt", "butter", "garlic", "heavy cream", "Parmesan cheese", "ground black pepper"],
-      "category": categories[3]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Homemade Calzones",
@@ -143,7 +145,8 @@
       "image": "calzone.jpg",
       "price": 12.99,
       "ingredients": ["pizza dough", "pizza sauce", "pepperoni", "mushrooms", "green peppers", "mozzarella cheese", "ricotta", "egg"],
-      "category": categories[3]._id,
+      "category": "",
+      "prepper": ""
     },
     {
       "name": "Fried Catfish",
