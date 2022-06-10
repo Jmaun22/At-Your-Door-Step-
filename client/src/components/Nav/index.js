@@ -47,7 +47,7 @@ function Nav() {
   return (
     <header className="flex-row-header px-1">
       <h1>
-        <Link to="/">
+        <Link className= "at-your-doorstep-link" to="/">
           <img
            style={{ width: 45 }}
            className="ayd-logo-class"

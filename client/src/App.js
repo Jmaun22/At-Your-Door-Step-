@@ -14,6 +14,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
@@ -45,6 +46,7 @@ function App() {
         <div>
           <StoreProvider>
             <Nav />
+            
             <Routes>
               <Route 
                 path="/" 
@@ -81,8 +83,11 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               />
+              
             </Routes>
+            
           </StoreProvider>
+          
         </div>
       </Router>
     </ApolloProvider>
