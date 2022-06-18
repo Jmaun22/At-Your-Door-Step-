@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8a035bf4.chunk.css",
+    "main.js": "/static/js/main.a636c00c.chunk.js",
+    "main.js.map": "/static/js/main.a636c00c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.94fbf65d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.94fbf65d.js.map",
+    "static/css/2.73a4b9c4.chunk.css": "/static/css/2.73a4b9c4.chunk.css",
+    "static/js/2.eed552f3.chunk.js": "/static/js/2.eed552f3.chunk.js",
+    "static/js/2.eed552f3.chunk.js.map": "/static/js/2.eed552f3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.73a4b9c4.chunk.css.map": "/static/css/2.73a4b9c4.chunk.css.map",
+    "static/css/main.8a035bf4.chunk.css.map": "/static/css/main.8a035bf4.chunk.css.map",
+    "static/js/2.eed552f3.chunk.js.LICENSE.txt": "/static/js/2.eed552f3.chunk.js.LICENSE.txt",
+    "static/media/HomePage.css": "/static/media/door-food.4a3c845c.jpg",
+    "static/media/spinner.7e729fec.gif": "/static/media/spinner.7e729fec.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94fbf65d.js",
+    "static/css/2.73a4b9c4.chunk.css",
+    "static/js/2.eed552f3.chunk.js",
+    "static/css/main.8a035bf4.chunk.css",
+    "static/js/main.a636c00c.chunk.js"
+  ]
+}

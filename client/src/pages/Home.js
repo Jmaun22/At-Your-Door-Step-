@@ -76,9 +76,12 @@ const Home = () => {
   return (
     <div className="homepage-container" >
 
-     <div className='homepageBackground'>
+     <div >
+     <img  src="images/door-step.jpg">
+   
+     </img>
 
-    <button>
+    <button className="customer-btn">
       
         <Link to="/prepper" className="prepperbtn">
         Click here to see your dishes
@@ -240,7 +243,9 @@ const Home = () => {
    
     <div className="our-dishes"> 
      <h1>Your prepper dishes 🥣</h1>
+     <div style={{width: '100%'}}> 
      <PrepperDishes />
+     </div>
 
      </div>
 
