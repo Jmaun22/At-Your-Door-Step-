@@ -1,5 +1,5 @@
 .homepageBackground {
-    background-image: url(../../assets/door-food.jpg);
+
     opacity: 50%;
     background-size: cover;
     background-position: center;
@@ -9,6 +9,20 @@
     justify-content: center;
     align-items: center;
 }
+
+.customer-btn {
+    position: absolute;
+    left: 570px;
+    bottom: 120px;
+   
+}
+@media only screen and (max-width: 500px) {
+    /* For desktop: */
+    .customer-btn {
+       display: flex;
+         justify-content: center;
+    }
+  }
 .prepper-module{
     display: flex;
     justify-content: center;
