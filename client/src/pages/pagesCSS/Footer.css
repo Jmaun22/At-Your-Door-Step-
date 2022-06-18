@@ -1,0 +1,25 @@
+.footer-middle { 
+    background: #B5CDA3;
+    padding-top: 3rem;
+    color: #fafafa;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    /* position: absolute; */
+    width:100%;
+    }
+
+.footer-bottom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+ul li a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #dfffdb;
+    text-decoration: none;
+}

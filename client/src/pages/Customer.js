@@ -6,6 +6,7 @@ import '../pages/pagesCSS/HomePage.css';
 import Button from "react-bootstrap/Button";
 import Carousel from 'react-bootstrap/Carousel'
 import '../pages/pagesCSS/CustomerPage.css';
+import Footer from "../components/Footer";
 
 
 
@@ -35,7 +36,7 @@ const Customer = () => {
     />
 
     <Carousel.Caption>
-      <h3>Spice up your palete!!</h3>
+      <h3>Spice up your palate!!</h3>
       <p>Try some truely authentic food from one of our preppers.</p>
     </Carousel.Caption>
   </Carousel.Item>
@@ -78,6 +79,7 @@ const Customer = () => {
     
 
       <Cart />
+      <Footer />
 
     </div> 
   );
