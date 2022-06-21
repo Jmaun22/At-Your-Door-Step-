@@ -12,17 +12,11 @@
 
 .customer-btn {
     position: absolute;
-    left: 570px;
+    left: 40%;
     bottom: 120px;
    
 }
-@media only screen and (max-width: 500px) {
-    /* For desktop: */
-    .customer-btn {
-       display: flex;
-         justify-content: center;
-    }
-  }
+
 .prepper-module{
     display: flex;
     justify-content: center;
@@ -105,3 +99,5 @@ h1 {
     align-content: center;
     justify-content: center;
 }
+
+  
