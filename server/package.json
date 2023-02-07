@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.jest",
+    "start": "node server.js",
     "watch": "nodemon",
     "seed": "node config/seeds.js"
   },
